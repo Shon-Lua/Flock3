@@ -4,7 +4,7 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta content="#29283b" name="theme-color"/>
-<meta content="Flock3 is an ecosystem for the LILYGO T5-4.7-S3 Pro, its Flock3+ firmware and the Flock3 Hub desktop companion." name="description"/>
+<meta content="Flock3+ is online music player firmware for a 4.7-inch E-Paper device manufactured by Shenzhen Xinyuan Electronic Technology Co., Ltd. It supports free online listening, track downloads, playlists, MP3 and WAV." name="description"/>
 <title>Flock3</title>
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
@@ -19,13 +19,13 @@
   --max:1320px;--radius:30px;
 }
 *{box-sizing:border-box}html{scroll-behavior:auto;scroll-padding-top:94px}body{margin:0;color:var(--ink);font-family:Manrope,Arial,sans-serif;background:radial-gradient(ellipse at 8% 8%,rgba(207,186,240,.18),transparent 34%),radial-gradient(ellipse at 92% 26%,rgba(142,236,245,.13),transparent 33%),radial-gradient(ellipse at 52% 82%,rgba(241,192,232,.11),transparent 40%),linear-gradient(135deg,#29283b,#343149 55%,#29283b);background-attachment:fixed;-webkit-font-smoothing:antialiased;overflow-x:hidden}
-body:before{content:"";position:fixed;inset:0;pointer-events:none;z-index:-1;opacity:.22;background-image:radial-gradient(rgba(255,255,255,.22) .7px,transparent .7px);background-size:22px 22px}a{color:inherit;text-decoration:none;transition:color .3s ease,background-color .35s ease,border-color .35s ease,box-shadow .35s ease,opacity .35s ease,transform .35s ease,filter .35s ease}button{font:inherit;transition:color .3s ease,background-color .35s ease,border-color .35s ease,box-shadow .35s ease,opacity .35s ease,transform .35s ease,filter .35s ease}img{display:block;max-width:100%}::selection{background:var(--mauve);color:#28263b}
+a{color:inherit;text-decoration:none;transition:color .3s ease,background-color .35s ease,border-color .35s ease,box-shadow .35s ease,opacity .35s ease,transform .35s ease,filter .35s ease}button{font:inherit;transition:color .3s ease,background-color .35s ease,border-color .35s ease,box-shadow .35s ease,opacity .35s ease,transform .35s ease,filter .35s ease}img{display:block;max-width:100%}::selection{background:var(--mauve);color:#28263b}
 .scroll-progress{height:3px;position:fixed;top:0;left:0;z-index:100;background:linear-gradient(90deg,var(--rose),var(--mauve),var(--frost),var(--mint));width:0}
 .topbar{--header-height:82px;height:82px;position:sticky;top:0;z-index:50;background:rgba(42,40,60,.68);backdrop-filter:blur(24px) saturate(150%);-webkit-backdrop-filter:blur(24px) saturate(150%);border-bottom:1px solid var(--stroke)}.topbar-inner{height:100%;max-width:var(--max);padding:0 5vw;margin:auto;display:flex;align-items:center;justify-content:space-between}.brand,.footer-brand{display:flex;align-items:center;gap:12px;font:800 22px "Space Grotesk",sans-serif;letter-spacing:-.06em}.brand img{width:38px;height:38px;object-fit:contain;filter:drop-shadow(0 5px 12px rgba(0,0,0,.2))}.nav{display:flex;align-items:center;gap:30px;font-size:12px;font-weight:700;color:#dedbed}.nav a{transition:color .2s,transform .2s}.nav a:hover{color:var(--aqua);transform:translateY(-1px)}.nav .nav-cta{color:#29283b;background:linear-gradient(110deg,var(--lemon),var(--petal));padding:13px 22px;border-radius:999px;box-shadow:0 8px 25px rgba(251,248,204,.15)}.menu-toggle{display:none;width:46px;height:46px;border:1px solid var(--stroke);border-radius:50%;background:var(--glass);backdrop-filter:blur(16px);color:var(--ink);cursor:pointer}
 .wrap{max-width:var(--max);margin:auto;padding-left:5vw;padding-right:5vw}.eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:10px;font-weight:800;letter-spacing:.17em;text-transform:uppercase;color:var(--mint)}.eyebrow:before{content:"";width:22px;height:2px;background:linear-gradient(90deg,var(--rose),var(--mauve));border-radius:4px}.hero{min-height:calc(100svh - 82px);display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:5vw;padding-top:65px;padding-bottom:90px;position:relative}.hero-copy{position:relative;z-index:2}.hero h1{font:700 clamp(58px,8vw,112px)/.91 "Space Grotesk",sans-serif;letter-spacing:-.085em;margin:24px 0 26px}.hero h1 span{background:linear-gradient(100deg,var(--rose),var(--mauve) 48%,var(--frost));background-clip:text;-webkit-background-clip:text;color:transparent}.hero-lead{max-width:530px;font-size:clamp(15px,1.45vw,19px);line-height:1.8;color:var(--muted)}.actions{display:flex;gap:14px;flex-wrap:wrap;margin-top:34px}.btn{min-height:50px;display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:0 25px;border:1px solid transparent;border-radius:999px;background:linear-gradient(110deg,var(--lemon),var(--petal));color:#302c42;font-size:12px;font-weight:800;cursor:pointer;box-shadow:0 10px 28px rgba(251,248,204,.13);transition:transform .22s,box-shadow .22s,filter .22s}.btn:hover{transform:translateY(-3px);box-shadow:0 15px 34px rgba(207,186,240,.24);filter:saturate(1.12)}.btn.secondary{background:rgba(255,255,255,.075);border-color:var(--stroke);color:var(--ink);box-shadow:inset 0 1px rgba(255,255,255,.12),0 10px 28px rgba(10,8,24,.12);backdrop-filter:blur(16px)}.btn.secondary:hover{background:rgba(255,255,255,.14);color:var(--aqua)}.hero-visual{min-height:520px;position:relative;display:grid;place-items:center}.device-stage{width:min(100%,560px);min-height:470px;position:relative;display:grid;place-items:center;border:1px solid rgba(255,255,255,.2);border-radius:38px;background:linear-gradient(145deg,rgba(255,255,255,.16),rgba(255,255,255,.045));backdrop-filter:blur(22px) saturate(140%);-webkit-backdrop-filter:blur(22px) saturate(140%);box-shadow:var(--shadow),inset 0 1px rgba(255,255,255,.2);overflow:hidden;transition:background .8s,border-color .8s,box-shadow .8s,transform .8s}.device-stage:before{content:"";position:absolute;width:390px;height:390px;border:1px solid rgba(255,255,255,.18);border-radius:50%;box-shadow:0 0 0 34px rgba(255,255,255,.035),0 0 0 70px rgba(255,255,255,.025)}.device-image{position:relative;z-index:2;width:clamp(180px,25vw,290px);max-height:430px;object-fit:contain;filter:drop-shadow(0 28px 26px rgba(0,0,0,.34));animation:deviceFloat 7s ease-in-out infinite}.hero-scroll{position:absolute;bottom:28px;left:5vw;display:flex;align-items:center;gap:12px;color:var(--muted);font-size:9px;font-weight:800;letter-spacing:.16em}.scroll-mark{width:36px;height:1px;background:linear-gradient(90deg,var(--rose),var(--frost))}@keyframes deviceFloat{0%,100%{transform:translateY(0) rotate(-2deg)}50%{transform:translateY(-13px) rotate(1deg)}}
 .marquee{overflow:hidden;border-block:1px solid var(--stroke);background:rgba(255,255,255,.055);backdrop-filter:blur(18px);padding:17px 0}.marquee-track{display:flex;gap:34px;width:max-content;animation:marquee 30s linear infinite;color:var(--mint);font:700 11px "Space Grotesk";letter-spacing:.16em}.marquee-track span{display:flex;align-items:center;gap:34px}.marquee-track i{width:6px;height:6px;background:var(--rose);border-radius:50%}@keyframes marquee{to{transform:translateX(-50%)}}
 .section{padding:118px 5vw}.section-head{max-width:var(--max);margin:0 auto 52px;display:flex;justify-content:space-between;align-items:end;gap:30px}.section-head h2{font:700 clamp(42px,6.5vw,82px)/.98 "Space Grotesk";letter-spacing:-.075em;margin:17px 0 0}.section-head p{max-width:410px;margin:0;color:var(--muted);font-size:14px;line-height:1.8}.foundation{background:linear-gradient(180deg,rgba(207,186,240,.055),transparent 75%)}.foundation-grid{max-width:var(--max);margin:auto;display:grid;grid-template-columns:1.05fr .95fr;gap:22px}.feature-panel{min-height:420px;padding:34px;border:1px solid var(--stroke);border-radius:var(--radius);background:linear-gradient(145deg,rgba(255,255,255,.14),rgba(255,255,255,.045));backdrop-filter:blur(22px) saturate(140%);box-shadow:var(--shadow),inset 0 1px rgba(255,255,255,.17);position:relative;overflow:hidden;transition:transform .35s,border-color .35s}.feature-panel:hover{transform:translateY(-5px);border-color:rgba(207,186,240,.55)}.feature-panel h3{font:700 clamp(30px,4vw,48px)/1 "Space Grotesk";letter-spacing:-.06em;margin:18px 0}.feature-panel p{max-width:420px;color:var(--muted);line-height:1.8;font-size:13px}.feature-panel .panel-foot{position:absolute;bottom:30px;left:34px;right:34px;display:flex;justify-content:space-between;align-items:center;color:var(--mint);font-size:10px;font-weight:800;letter-spacing:.13em}.feature-symbol{position:absolute;right:5%;top:16%;width:190px;height:190px;border-radius:50%;background:linear-gradient(145deg,rgba(241,192,232,.24),rgba(163,196,243,.08));border:1px solid rgba(255,255,255,.18);box-shadow:inset 0 1px rgba(255,255,255,.2),0 20px 50px rgba(10,8,24,.18);display:grid;place-items:center;color:var(--rose);font:700 56px "Space Grotesk";opacity:.9}.feature-symbol:before,.feature-symbol:after{content:"";position:absolute;border:1px solid rgba(255,255,255,.2);border-radius:50%;inset:20px}.feature-symbol:after{inset:42px}.feature-panel.accent{background:linear-gradient(145deg,rgba(142,236,245,.14),rgba(207,186,240,.06))}.feature-panel.accent .feature-symbol{background:linear-gradient(145deg,rgba(142,236,245,.22),rgba(152,245,225,.08));color:var(--aqua)}.mini-label{display:inline-flex;padding:9px 14px;border:1px solid rgba(255,255,255,.15);border-radius:999px;background:rgba(255,255,255,.09);color:var(--lemon);font-size:9px;font-weight:800;letter-spacing:.15em;backdrop-filter:blur(12px)}
-.products{padding-top:30px}.product-list{max-width:var(--max);margin:auto;display:grid;gap:22px}.product-card{display:grid;grid-template-columns:1fr 1fr;min-height:440px;border:1px solid var(--stroke);border-radius:var(--radius);background:linear-gradient(145deg,rgba(255,255,255,.12),rgba(255,255,255,.04));backdrop-filter:blur(22px) saturate(140%);box-shadow:var(--shadow),inset 0 1px rgba(255,255,255,.16);overflow:hidden;transition:transform .35s,border-color .35s}.product-card:hover{transform:translateY(-4px);border-color:rgba(163,196,243,.5)}.product-card.reverse .product-art{order:2}.product-info{padding:clamp(28px,5vw,62px);display:flex;flex-direction:column;justify-content:center}.product-index{font-size:10px;color:var(--rose);font-weight:800;letter-spacing:.16em}.product-info h3{font:700 clamp(38px,5vw,64px)/.98 "Space Grotesk";letter-spacing:-.07em;margin:18px 0}.product-info p{max-width:460px;color:var(--muted);font-size:14px;line-height:1.85}.product-meta{display:flex;gap:9px;flex-wrap:wrap;margin:17px 0 28px}.tag{padding:9px 14px;border:1px solid rgba(255,255,255,.15);border-radius:999px;background:rgba(255,255,255,.075);font-size:9px;font-weight:800;letter-spacing:.1em;color:var(--aqua)}.product-art{min-height:380px;display:grid;place-items:center;position:relative;padding:28px;background:radial-gradient(circle at 50% 50%,rgba(207,186,240,.14),transparent 62%)}.product-art:before{content:"";position:absolute;width:290px;height:290px;border-radius:50%;background:radial-gradient(circle,rgba(255,255,255,.12),rgba(255,255,255,.015) 70%);border:1px solid rgba(255,255,255,.12)}.product-art img{position:relative;z-index:1;max-height:330px;width:auto;object-fit:contain;filter:drop-shadow(0 25px 22px rgba(0,0,0,.35));transition:transform .5s}.product-card:hover .product-art img{transform:translateY(-8px) rotate(-2deg)}.status{display:inline-flex;align-self:flex-start;padding:10px 15px;border:1px solid rgba(152,245,225,.25);border-radius:999px;background:rgba(152,245,225,.1);color:var(--mint);font-size:9px;font-weight:800;letter-spacing:.13em}
+.products{padding-top:30px}.product-list{max-width:var(--max);margin:auto;display:grid;gap:22px}.product-card{display:grid;grid-template-columns:1fr 1fr;min-height:440px;border:1px solid var(--stroke);border-radius:var(--radius);background:linear-gradient(145deg,rgba(255,255,255,.12),rgba(255,255,255,.04));backdrop-filter:blur(22px) saturate(140%);box-shadow:var(--shadow),inset 0 1px rgba(255,255,255,.16);overflow:hidden;transition:transform .35s,border-color .35s}.product-card:hover{transform:translateY(-4px);border-color:rgba(163,196,243,.5)}.product-card.reverse .product-art{order:2}.product-info{padding:clamp(28px,5vw,62px);display:flex;flex-direction:column;justify-content:center}.product-index{font-size:10px;color:var(--rose);font-weight:800;letter-spacing:.16em}.product-info h3{font:700 clamp(38px,5vw,64px)/.98 "Space Grotesk";letter-spacing:-.07em;margin:18px 0}.product-info p{max-width:460px;color:var(--muted);font-size:14px;line-height:1.85}.product-art{min-height:380px;display:grid;place-items:center;position:relative;padding:28px;background:radial-gradient(circle at 50% 50%,rgba(207,186,240,.14),transparent 62%)}.product-art:before{content:"";position:absolute;width:290px;height:290px;border-radius:50%;background:radial-gradient(circle,rgba(255,255,255,.12),rgba(255,255,255,.015) 70%);border:1px solid rgba(255,255,255,.12)}.product-art img{position:relative;z-index:1;max-height:330px;width:auto;object-fit:contain;filter:drop-shadow(0 25px 22px rgba(0,0,0,.35));transition:transform .5s}.product-card:hover .product-art img{transform:translateY(-8px) rotate(-2deg)}
 .faq{max-width:var(--max);margin:auto;border:1px solid var(--stroke);border-radius:var(--radius);background:rgba(255,255,255,.07);backdrop-filter:blur(20px);overflow:hidden;box-shadow:var(--shadow)}.faq-item+.faq-item{border-top:1px solid var(--stroke)}.faq-button{width:100%;padding:23px 28px;display:flex;justify-content:space-between;align-items:center;background:none;border:0;color:var(--ink);font:700 16px "Space Grotesk";text-align:left;cursor:pointer}.faq-button span:last-child{width:34px;height:34px;border-radius:50%;display:grid;place-items:center;background:rgba(255,255,255,.1);color:var(--aqua);font-size:21px;transition:transform .25s,background .25s}.faq-item.open .faq-button span:last-child{transform:rotate(45deg);background:rgba(207,186,240,.2)}.faq-answer{max-height:0;overflow:hidden;transition:max-height .65s cubic-bezier(.2,.75,.25,1)}.faq-answer p{margin:0;padding:0 28px 24px;max-width:850px;color:var(--muted);font-size:14px;line-height:1.8}.footer{width:min(1000px,90vw);margin:34px auto 28px;padding:18px 26px;border:1px solid var(--stroke);border-radius:26px;background:rgba(28,27,43,.48);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);box-shadow:0 18px 48px rgba(12,10,29,.16)}.footer-inner{max-width:100%;margin:auto;display:flex;align-items:center;justify-content:space-between;gap:20px}.footer-brand img{width:30px;height:30px;object-fit:contain}.github-link{display:inline-flex;align-items:center;gap:9px;padding:10px 16px;border:1px solid var(--stroke);border-radius:999px;background:rgba(255,255,255,.07);color:var(--muted);font-size:11px;font-weight:800;letter-spacing:.04em}.github-link:hover{color:var(--aqua);background:rgba(255,255,255,.13);border-color:rgba(142,236,245,.38);transform:translateY(-2px)}
 .reveal{opacity:0;filter:blur(3px);transform:translate3d(0,42px,0) scale(.985);transition:opacity .95s ease,transform .95s cubic-bezier(.18,.72,.22,1),filter .95s ease;will-change:opacity,transform,filter}.reveal.visible{opacity:1;filter:blur(0);transform:translate3d(0,0,0) scale(1)}
 .hero-copy.reveal{transition-delay:.04s}.hero-visual.reveal{transition-delay:.16s}
@@ -33,8 +33,11 @@ body:before{content:"";position:fixed;inset:0;pointer-events:none;z-index:-1;opa
 
 .faq.reveal,.footer.reveal{transition-delay:.08s}
 @media(max-width:900px){.hero{grid-template-columns:1fr;padding-top:75px}.hero-copy{max-width:720px}.hero-visual{min-height:410px}.device-stage{min-height:400px}.foundation-grid{grid-template-columns:1fr}.feature-panel{min-height:360px}.product-card{grid-template-columns:1fr}.product-card.reverse .product-art{order:0}.product-art{min-height:330px}.section-head{align-items:flex-start;flex-direction:column}.section-head p{max-width:620px}.nav{gap:18px}}
+
+.installer-overlay{position:fixed;inset:0;z-index:200;display:none;place-items:center;padding:22px;background:rgba(12,11,22,.72);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);opacity:0;transition:opacity .28s ease}.installer-overlay.open{display:grid;opacity:1}.installer-dialog{width:min(100%,520px);padding:clamp(24px,5vw,38px);border:1px solid rgba(255,255,255,.2);border-radius:30px;background:linear-gradient(145deg,rgba(58,55,80,.98),rgba(38,37,56,.98));box-shadow:0 30px 100px rgba(0,0,0,.48);transform:translateY(18px) scale(.98);transition:transform .32s cubic-bezier(.2,.8,.2,1)}.installer-overlay.open .installer-dialog{transform:translateY(0) scale(1)}.installer-head{display:flex;align-items:center;justify-content:space-between;gap:20px}.installer-head h2{margin:0;font:700 32px/1 "Space Grotesk";letter-spacing:-.06em}.installer-close{width:40px;height:40px;border:1px solid var(--stroke);border-radius:50%;background:rgba(255,255,255,.08);color:var(--ink);font-size:22px;cursor:pointer}.installer-copy{color:var(--muted);font-size:13px;line-height:1.75;margin:18px 0 26px}.installer-label{display:block;margin-bottom:10px;font-size:11px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--mint)}.installer-port-row{display:grid;grid-template-columns:1fr auto;gap:10px}.installer-port{min-width:0;min-height:50px;padding:0 15px;border:1px solid var(--stroke);border-radius:15px;background:rgba(255,255,255,.07);color:var(--ink);font:600 12px Manrope}.installer-select{min-height:50px;padding:0 17px;border:1px solid rgba(255,255,255,.2);border-radius:15px;background:rgba(255,255,255,.1);color:var(--ink);font-size:12px;font-weight:800;cursor:pointer}.installer-flash{width:100%;margin-top:16px;min-height:54px;background:linear-gradient(110deg,var(--mint),var(--aqua));font-size:13px}.installer-status{min-height:40px;margin:16px 0 0;color:var(--muted);font-size:11px;line-height:1.65}.installer-note{margin-top:14px;padding:12px 14px;border-radius:14px;background:rgba(255,207,210,.08);border:1px solid rgba(255,207,210,.18);color:#f5dfe2;font-size:11px;line-height:1.6}.audius-credit{display:inline-flex;align-items:center;gap:10px;color:var(--muted);font-size:12px;font-weight:800}.audius-credit svg{width:25px;height:25px;flex:none}.audius-credit:hover{color:var(--ink)}.footer-inner{flex-wrap:wrap}
+
 @media(max-width:650px){.topbar{--header-height:72px;height:72px}.topbar-inner{padding:0 6vw}.menu-toggle{display:block}.nav{display:none;position:absolute;top:72px;left:4vw;right:4vw;padding:18px;border:1px solid var(--stroke);border-radius:24px;background:rgba(43,41,62,.94);backdrop-filter:blur(24px);box-shadow:var(--shadow);flex-direction:column;align-items:stretch;gap:0}.nav.open{display:flex}.nav a{padding:14px 12px}.nav .nav-cta{margin-top:10px;text-align:center}.hero{min-height:auto;padding-top:65px;padding-bottom:75px;gap:22px}.hero h1{font-size:clamp(55px,17vw,84px)}.hero-visual{min-height:350px}.device-stage{min-height:340px;border-radius:28px}.device-stage:before{width:250px;height:250px}.device-image{width:220px;max-height:300px}.hero-scroll{bottom:22px}.section{padding:78px 6vw}.section-head{margin-bottom:34px}.section-head h2{font-size:clamp(40px,13vw,64px)}.feature-panel{padding:25px;min-height:370px;border-radius:25px}.feature-symbol{width:135px;height:135px;font-size:40px;right:4%;top:13%}.feature-panel .panel-foot{left:25px;right:25px;bottom:25px}.product-card{border-radius:25px}.product-info{padding:28px 25px}.product-info h3{font-size:46px}.product-art{min-height:280px;padding:20px}.product-art:before{width:220px;height:220px}.product-art img{max-height:250px}.faq{border-radius:24px}.faq-button{padding:20px;font-size:14px}.faq-answer p{padding:0 20px 20px}.footer{width:calc(100% - 12vw);padding:16px 20px;margin:26px auto 20px}.footer-inner{align-items:center;flex-direction:row}.marquee-track{font-size:10px}}
-/* Single-page anchor navigation */
+
 #home,#products,#faq{scroll-margin-top:calc(var(--header-height, 82px) + 12px)}
 .nav a[aria-current="location"]{color:var(--lemon)}
 .nav a[aria-current="location"]:after{content:"";display:block;height:2px;margin-top:5px;border-radius:2px;background:linear-gradient(90deg,var(--rose),var(--frost))}
@@ -55,7 +58,7 @@ body:before{content:"";position:fixed;inset:0;pointer-events:none;z-index:-1;opa
 }
 .device-face{position:absolute;inset:2.2% 2.6% 2.2%;border-radius:21px;background:linear-gradient(145deg,#fff 0%,#fafbfa 58%,#f0f2f1 100%);border:1px solid rgba(255,255,255,.98);box-shadow:inset 0 0 0 1px rgba(86,96,103,.1),0 1px 3px rgba(255,255,255,.8);}
 .device-screen{position:absolute;left:6.5%;right:6.5%;top:10.5%;bottom:10.5%;border:1px solid rgba(93,101,99,.16);background:linear-gradient(145deg,#d1d5d0,#c4c9c4);box-shadow:inset 0 2px 9px rgba(50,58,55,.09),0 1px 0 rgba(255,255,255,.7);overflow:hidden;}
-.device-screen:before{content:"";position:absolute;inset:0;background:repeating-linear-gradient(0deg,rgba(65,73,68,.025) 0 1px,transparent 1px 3px);opacity:.55}
+
 .device-touch{position:absolute;left:50%;bottom:3.2%;width:24px;height:24px;transform:translateX(-50%);border:3px solid #fff;border-radius:50%;background:rgba(255,255,255,.12);box-shadow:0 0 0 1px rgba(255,255,255,.55),0 0 8px rgba(255,255,255,.82),0 0 18px rgba(255,255,255,.34);}
 .device-button{position:absolute;top:39%;width:4px;height:8%;border-radius:3px;background:linear-gradient(90deg,#747b81,#c4c9cd,#858d94);box-shadow:0 1px 2px rgba(0,0,0,.25)}
 .device-button.left{left:-3px}.device-button.right{right:-3px;top:47%;height:6%}
@@ -63,14 +66,15 @@ body:before{content:"";position:fixed;inset:0;pointer-events:none;z-index:-1;opa
 .product-art .device-illustration{width:clamp(166px,15vw,190px);max-width:82%;}
 @keyframes deviceFloat{0%,100%{transform:perspective(1100px) translateY(0) rotateY(-5deg) rotateZ(-1deg)}50%{transform:perspective(1100px) translateY(-10px) rotateY(-1deg) rotateZ(.5deg)}}
 @media(max-width:900px){.hero .device-illustration{width:clamp(190px,27vw,224px);aspect-ratio:279 / 520}}
+
+.installer-overlay{position:fixed;inset:0;z-index:200;display:none;place-items:center;padding:22px;background:rgba(12,11,22,.72);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);opacity:0;transition:opacity .28s ease}.installer-overlay.open{display:grid;opacity:1}.installer-dialog{width:min(100%,520px);padding:clamp(24px,5vw,38px);border:1px solid rgba(255,255,255,.2);border-radius:30px;background:linear-gradient(145deg,rgba(58,55,80,.98),rgba(38,37,56,.98));box-shadow:0 30px 100px rgba(0,0,0,.48);transform:translateY(18px) scale(.98);transition:transform .32s cubic-bezier(.2,.8,.2,1)}.installer-overlay.open .installer-dialog{transform:translateY(0) scale(1)}.installer-head{display:flex;align-items:center;justify-content:space-between;gap:20px}.installer-head h2{margin:0;font:700 32px/1 "Space Grotesk";letter-spacing:-.06em}.installer-close{width:40px;height:40px;border:1px solid var(--stroke);border-radius:50%;background:rgba(255,255,255,.08);color:var(--ink);font-size:22px;cursor:pointer}.installer-copy{color:var(--muted);font-size:13px;line-height:1.75;margin:18px 0 26px}.installer-label{display:block;margin-bottom:10px;font-size:11px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--mint)}.installer-port-row{display:grid;grid-template-columns:1fr auto;gap:10px}.installer-port{min-width:0;min-height:50px;padding:0 15px;border:1px solid var(--stroke);border-radius:15px;background:rgba(255,255,255,.07);color:var(--ink);font:600 12px Manrope}.installer-select{min-height:50px;padding:0 17px;border:1px solid rgba(255,255,255,.2);border-radius:15px;background:rgba(255,255,255,.1);color:var(--ink);font-size:12px;font-weight:800;cursor:pointer}.installer-flash{width:100%;margin-top:16px;min-height:54px;background:linear-gradient(110deg,var(--mint),var(--aqua));font-size:13px}.installer-status{min-height:40px;margin:16px 0 0;color:var(--muted);font-size:11px;line-height:1.65}.installer-note{margin-top:14px;padding:12px 14px;border-radius:14px;background:rgba(255,207,210,.08);border:1px solid rgba(255,207,210,.18);color:#f5dfe2;font-size:11px;line-height:1.6}.audius-credit{display:inline-flex;align-items:center;gap:10px;color:var(--muted);font-size:12px;font-weight:800}.audius-credit svg{width:25px;height:25px;flex:none}.audius-credit:hover{color:var(--ink)}.footer-inner{flex-wrap:wrap}
+
 @media(max-width:650px){.hero .device-illustration{width:184px;aspect-ratio:279 / 520}.product-art .device-illustration{width:168px;aspect-ratio:279 / 520}}
 
-/* Consistent, unhurried motion across the interface. */
 *,*::before,*::after{transition-property:color,background-color,border-color,box-shadow,filter,opacity,transform;transition-duration:.55s;transition-timing-function:cubic-bezier(.2,.75,.25,1)}
-a,button,.feature-panel,.product-card,.faq,.faq-button,.tag,.status,.mini-label,.device-stage,.device-illustration,.device-illustration:before,.device-face,.device-screen,.device-touch,.device-button{transition-timing-function:cubic-bezier(.2,.75,.25,1)}
-.nav a,.nav-cta,.btn,.menu-toggle,.feature-panel,.product-card,.faq-button,.faq-button span:last-child,.tag,.status,.mini-label{transition-duration:.45s}
+a,button,.feature-panel,.product-card,.faq,.faq-button,.mini-label,.device-stage,.device-illustration,.device-illustration:before,.device-face,.device-screen,.device-touch,.device-button{transition-timing-function:cubic-bezier(.2,.75,.25,1)}
+.nav a,.nav-cta,.btn,.menu-toggle,.feature-panel,.product-card,.faq-button,.faq-button span:last-child,.mini-label{transition-duration:.45s}
 
-/* Device presentation: true front-facing proportions and a consistent finish. */
 .device-illustration{
   width:220px !important;
   height:395px !important;
@@ -102,7 +106,7 @@ a,button,.feature-panel,.product-card,.faq,.faq-button,.tag,.status,.mini-label,
   border:1px solid rgba(255,255,255,.98);
   box-shadow:inset 0 0 0 1px rgba(86,96,103,.08),0 1px 3px rgba(255,255,255,.8);
 }
-/* Keep the existing e-paper screen geometry; only unify its surrounding finish. */
+
 .device-touch{
   width:25px;height:25px;
   border:3px solid #fff;
@@ -114,6 +118,9 @@ a,button,.feature-panel,.product-card,.faq,.faq-button,.tag,.status,.mini-label,
 .product-art .device-illustration{width:220px !important;height:410px !important;max-width:82%;transform:scale(.82);transform-origin:center;}
 @keyframes deviceFloatFront{0%,100%{transform:translateY(0)}50%{transform:translateY(-9px)}}
 @media(max-width:900px){.hero .device-illustration{width:216px !important;height:422px !important;aspect-ratio:auto}}
+
+.installer-overlay{position:fixed;inset:0;z-index:200;display:none;place-items:center;padding:22px;background:rgba(12,11,22,.72);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);opacity:0;transition:opacity .28s ease}.installer-overlay.open{display:grid;opacity:1}.installer-dialog{width:min(100%,520px);padding:clamp(24px,5vw,38px);border:1px solid rgba(255,255,255,.2);border-radius:30px;background:linear-gradient(145deg,rgba(58,55,80,.98),rgba(38,37,56,.98));box-shadow:0 30px 100px rgba(0,0,0,.48);transform:translateY(18px) scale(.98);transition:transform .32s cubic-bezier(.2,.8,.2,1)}.installer-overlay.open .installer-dialog{transform:translateY(0) scale(1)}.installer-head{display:flex;align-items:center;justify-content:space-between;gap:20px}.installer-head h2{margin:0;font:700 32px/1 "Space Grotesk";letter-spacing:-.06em}.installer-close{width:40px;height:40px;border:1px solid var(--stroke);border-radius:50%;background:rgba(255,255,255,.08);color:var(--ink);font-size:22px;cursor:pointer}.installer-copy{color:var(--muted);font-size:13px;line-height:1.75;margin:18px 0 26px}.installer-label{display:block;margin-bottom:10px;font-size:11px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--mint)}.installer-port-row{display:grid;grid-template-columns:1fr auto;gap:10px}.installer-port{min-width:0;min-height:50px;padding:0 15px;border:1px solid var(--stroke);border-radius:15px;background:rgba(255,255,255,.07);color:var(--ink);font:600 12px Manrope}.installer-select{min-height:50px;padding:0 17px;border:1px solid rgba(255,255,255,.2);border-radius:15px;background:rgba(255,255,255,.1);color:var(--ink);font-size:12px;font-weight:800;cursor:pointer}.installer-flash{width:100%;margin-top:16px;min-height:54px;background:linear-gradient(110deg,var(--mint),var(--aqua));font-size:13px}.installer-status{min-height:40px;margin:16px 0 0;color:var(--muted);font-size:11px;line-height:1.65}.installer-note{margin-top:14px;padding:12px 14px;border-radius:14px;background:rgba(255,207,210,.08);border:1px solid rgba(255,207,210,.18);color:#f5dfe2;font-size:11px;line-height:1.6}.audius-credit{display:inline-flex;align-items:center;gap:10px;color:var(--muted);font-size:12px;font-weight:800}.audius-credit svg{width:25px;height:25px;flex:none}.audius-credit:hover{color:var(--ink)}.footer-inner{flex-wrap:wrap}
+
 @media(max-width:650px){.hero .device-illustration{width:184px !important;height:360px !important;aspect-ratio:auto}.product-art .device-illustration{width:184px !important;height:343px !important;transform:scale(.88)}}
 .firmware-visual{width:min(78%,340px);aspect-ratio:1;position:relative;display:grid;place-items:center;border-radius:34px;border:1px solid rgba(255,255,255,.2);background:linear-gradient(145deg,rgba(142,236,245,.18),rgba(207,186,240,.1) 55%,rgba(255,255,255,.045));box-shadow:inset 0 1px rgba(255,255,255,.22),0 24px 60px rgba(12,10,29,.22);backdrop-filter:blur(18px)}
 .firmware-visual:before,.firmware-visual:after{content:"";position:absolute;inset:12%;border:1px solid rgba(255,255,255,.18);border-radius:26px;transform:rotate(45deg)}
@@ -123,7 +130,6 @@ a,button,.feature-panel,.product-card,.faq,.faq-button,.tag,.status,.mini-label,
 .firmware-visual i{position:absolute;width:7px;height:7px;border-radius:50%;background:var(--mint);box-shadow:0 0 16px var(--mint)}
 .firmware-visual i:nth-of-type(1){left:17%;top:50%}.firmware-visual i:nth-of-type(2){right:17%;top:50%;background:var(--rose);box-shadow:0 0 16px var(--rose)}.firmware-visual i:nth-of-type(3){left:50%;bottom:17%;background:var(--frost);box-shadow:0 0 16px var(--frost)}
 
-/* Final hardware detailing: uniform chassis margins and mirrored side controls. */
 .device-illustration{
   border-radius:24px;
   background:linear-gradient(90deg,#969da3 0%,#aeb4b9 8%,#aeb4b9 92%,#969da3 100%);
@@ -159,6 +165,9 @@ a,button,.feature-panel,.product-card,.faq,.faq-button,.tag,.status,.mini-label,
 .device-button.side-left{left:-3px;}
 .device-button.side-right{right:-3px;}
 .device-illustration .device-face{box-sizing:border-box;}
+
+.installer-overlay{position:fixed;inset:0;z-index:200;display:none;place-items:center;padding:22px;background:rgba(12,11,22,.72);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);opacity:0;transition:opacity .28s ease}.installer-overlay.open{display:grid;opacity:1}.installer-dialog{width:min(100%,520px);padding:clamp(24px,5vw,38px);border:1px solid rgba(255,255,255,.2);border-radius:30px;background:linear-gradient(145deg,rgba(58,55,80,.98),rgba(38,37,56,.98));box-shadow:0 30px 100px rgba(0,0,0,.48);transform:translateY(18px) scale(.98);transition:transform .32s cubic-bezier(.2,.8,.2,1)}.installer-overlay.open .installer-dialog{transform:translateY(0) scale(1)}.installer-head{display:flex;align-items:center;justify-content:space-between;gap:20px}.installer-head h2{margin:0;font:700 32px/1 "Space Grotesk";letter-spacing:-.06em}.installer-close{width:40px;height:40px;border:1px solid var(--stroke);border-radius:50%;background:rgba(255,255,255,.08);color:var(--ink);font-size:22px;cursor:pointer}.installer-copy{color:var(--muted);font-size:13px;line-height:1.75;margin:18px 0 26px}.installer-label{display:block;margin-bottom:10px;font-size:11px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--mint)}.installer-port-row{display:grid;grid-template-columns:1fr auto;gap:10px}.installer-port{min-width:0;min-height:50px;padding:0 15px;border:1px solid var(--stroke);border-radius:15px;background:rgba(255,255,255,.07);color:var(--ink);font:600 12px Manrope}.installer-select{min-height:50px;padding:0 17px;border:1px solid rgba(255,255,255,.2);border-radius:15px;background:rgba(255,255,255,.1);color:var(--ink);font-size:12px;font-weight:800;cursor:pointer}.installer-flash{width:100%;margin-top:16px;min-height:54px;background:linear-gradient(110deg,var(--mint),var(--aqua));font-size:13px}.installer-status{min-height:40px;margin:16px 0 0;color:var(--muted);font-size:11px;line-height:1.65}.installer-note{margin-top:14px;padding:12px 14px;border-radius:14px;background:rgba(255,207,210,.08);border:1px solid rgba(255,207,210,.18);color:#f5dfe2;font-size:11px;line-height:1.6}.audius-credit{display:inline-flex;align-items:center;gap:10px;color:var(--muted);font-size:12px;font-weight:800}.audius-credit svg{width:25px;height:25px;flex:none}.audius-credit:hover{color:var(--ink)}.footer-inner{flex-wrap:wrap}
+
 @media(max-width:650px){
   .device-button{width:4px;height:19px;}
   .device-button.upper{top:56%;}
@@ -166,10 +175,11 @@ a,button,.feature-panel,.product-card,.faq,.faq-button,.tag,.status,.mini-label,
   .device-touch{bottom:3%;width:24px;height:24px;}
 }
 
-
-/* Taller Home device silhouette and scroll-reveal staging. */
 @media(min-width:901px){.hero .device-stage{min-height:490px}}
 @media(max-width:900px){.hero .device-illustration{height:422px !important}.hero .device-stage{min-height:450px}.hero .hero-visual{min-height:455px}}
+
+.installer-overlay{position:fixed;inset:0;z-index:200;display:none;place-items:center;padding:22px;background:rgba(12,11,22,.72);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);opacity:0;transition:opacity .28s ease}.installer-overlay.open{display:grid;opacity:1}.installer-dialog{width:min(100%,520px);padding:clamp(24px,5vw,38px);border:1px solid rgba(255,255,255,.2);border-radius:30px;background:linear-gradient(145deg,rgba(58,55,80,.98),rgba(38,37,56,.98));box-shadow:0 30px 100px rgba(0,0,0,.48);transform:translateY(18px) scale(.98);transition:transform .32s cubic-bezier(.2,.8,.2,1)}.installer-overlay.open .installer-dialog{transform:translateY(0) scale(1)}.installer-head{display:flex;align-items:center;justify-content:space-between;gap:20px}.installer-head h2{margin:0;font:700 32px/1 "Space Grotesk";letter-spacing:-.06em}.installer-close{width:40px;height:40px;border:1px solid var(--stroke);border-radius:50%;background:rgba(255,255,255,.08);color:var(--ink);font-size:22px;cursor:pointer}.installer-copy{color:var(--muted);font-size:13px;line-height:1.75;margin:18px 0 26px}.installer-label{display:block;margin-bottom:10px;font-size:11px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--mint)}.installer-port-row{display:grid;grid-template-columns:1fr auto;gap:10px}.installer-port{min-width:0;min-height:50px;padding:0 15px;border:1px solid var(--stroke);border-radius:15px;background:rgba(255,255,255,.07);color:var(--ink);font:600 12px Manrope}.installer-select{min-height:50px;padding:0 17px;border:1px solid rgba(255,255,255,.2);border-radius:15px;background:rgba(255,255,255,.1);color:var(--ink);font-size:12px;font-weight:800;cursor:pointer}.installer-flash{width:100%;margin-top:16px;min-height:54px;background:linear-gradient(110deg,var(--mint),var(--aqua));font-size:13px}.installer-status{min-height:40px;margin:16px 0 0;color:var(--muted);font-size:11px;line-height:1.65}.installer-note{margin-top:14px;padding:12px 14px;border-radius:14px;background:rgba(255,207,210,.08);border:1px solid rgba(255,207,210,.18);color:#f5dfe2;font-size:11px;line-height:1.6}.audius-credit{display:inline-flex;align-items:center;gap:10px;color:var(--muted);font-size:12px;font-weight:800}.audius-credit svg{width:25px;height:25px;flex:none}.audius-credit:hover{color:var(--ink)}.footer-inner{flex-wrap:wrap}
+
 @media(max-width:650px){.hero .device-illustration{height:360px !important}.hero .device-stage{min-height:390px}.hero .hero-visual{min-height:400px}}
 .section-head.reveal>div,.section-head.reveal>p,
 .product-card.reveal>.product-info,.product-card.reveal>.product-art,
@@ -189,20 +199,18 @@ a,button,.feature-panel,.product-card,.faq,.faq-button,.tag,.status,.mini-label,
 .footer.reveal.visible .footer-inner>*{opacity:1;transform:translateY(0)}
 .footer.reveal.visible .footer-inner>*:nth-child(2){transition-delay:.12s}
 
-/* Consistent motion: keep the actual property transitions intact (including FAQ height). */
 html{scroll-behavior:auto}
-.nav a,.brand,.footer-brand,.github-link,.btn,.menu-toggle,.faq-button,.showcase-arrow,.showcase-dot,.tag,.status,.feature-panel,.product-card,.device-stage,.device-illustration,.device-touch,.device-button{
+.nav a,.brand,.footer-brand,.github-link,.btn,.menu-toggle,.faq-button,.feature-panel,.product-card,.device-stage,.device-illustration,.device-touch,.device-button{
   transition-timing-function:cubic-bezier(.2,.75,.25,1);
 }
 .product-card.reveal.visible:hover{transform:translateY(-4px);border-color:rgba(163,196,243,.5)}
-.btn:active,.showcase-arrow:active{transform:translateY(0) scale(.97)}
+.btn:active{transform:translateY(0) scale(.97)}
 
-/* Home carousel: a restrained 3D page-turn between the device and the Windows app. */
 .hero-showcase{perspective:1450px;isolation:isolate;min-height:490px}
 .hero-showcase:before{z-index:0;pointer-events:none}
 .showcase-slides{position:absolute;inset:0;z-index:1;overflow:hidden}
 .showcase-slide{
-  position:absolute;inset:0 0 48px;display:grid;place-items:center;padding:8px 20px 0;
+  position:absolute;inset:0;display:grid;place-items:center;padding:8px 20px 0;
   opacity:0;visibility:hidden;pointer-events:none;
   transform:perspective(1300px) translateX(6%) rotateY(-24deg) scale(.955);
   transform-origin:left center;
@@ -222,101 +230,62 @@ html{scroll-behavior:auto}
 .showcase-slide.from-left{transform:perspective(1300px) translateX(-6%) rotateY(24deg) scale(.955);transform-origin:right center}
 .showcase-slide.is-leaving.leaves-right{transform:perspective(1300px) translateX(6%) rotateY(-24deg) scale(.955);transform-origin:left center}
 .showcase-device{z-index:1}
-.showcase-controls{
-  position:absolute;z-index:5;left:50%;bottom:12px;transform:translateX(-50%);
-  display:flex;align-items:center;justify-content:center;gap:13px;width:max-content;max-width:calc(100% - 28px);
-}
-.showcase-arrow{
-  width:34px;height:34px;flex:0 0 34px;display:grid;place-items:center;padding:0;
-  border:1px solid rgba(255,255,255,.2);border-radius:50%;background:rgba(255,255,255,.09);
-  color:var(--ink);font:400 24px/1 "Manrope",sans-serif;cursor:pointer;
-  backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);
-}
-.showcase-arrow:hover{background:rgba(255,255,255,.2);border-color:rgba(142,236,245,.55);color:var(--aqua);transform:scale(1.08)}
-.showcase-control-center{display:flex;flex-direction:column;align-items:center;gap:7px;min-width:170px}
-.showcase-label{font-size:8px;line-height:1.2;font-weight:800;letter-spacing:.14em;color:var(--muted);white-space:nowrap}
-.showcase-dots{display:flex;align-items:center;justify-content:center;gap:7px}
-.showcase-dot{width:7px;height:7px;padding:0;border:0;border-radius:99px;background:rgba(255,255,255,.34);cursor:pointer}
-.showcase-dot:hover{background:rgba(255,255,255,.72);transform:scale(1.25)}
-.showcase-dot.is-active{width:23px;background:linear-gradient(90deg,var(--rose),var(--frost))}
+
+
+
+
+
+
+
+
+
 .hero-showcase:hover{border-color:rgba(207,186,240,.4);box-shadow:0 26px 72px rgba(12,10,29,.34),inset 0 1px rgba(255,255,255,.24)}
 
-/* Windows application mock-up used by the second Home slide. */
-
 @keyframes hubFloat{0%,100%{transform:translateY(0) rotate(-1deg)}50%{transform:translateY(-8px) rotate(.6deg)}}
-
-
 
 .hub-window-actions{margin-left:auto;display:flex;align-items:center;gap:7px}
 .hub-window-actions i{width:7px;height:7px;border-radius:50%;background:rgba(255,255,255,.35)}
 .hub-window-actions i:last-child{background:rgba(255,207,210,.8)}
 .hero-hub-screen{height:calc(100% - 66px);min-height:0;grid-template-columns:46px 1fr;gap:13px;padding:13px;background:linear-gradient(135deg,#45445b,#302f45);border-radius:0}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 @media(max-width:900px){.hero-showcase{min-height:490px}.showcase-slide{padding-left:12px;padding-right:12px}}
+
+.installer-overlay{position:fixed;inset:0;z-index:200;display:none;place-items:center;padding:22px;background:rgba(12,11,22,.72);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);opacity:0;transition:opacity .28s ease}.installer-overlay.open{display:grid;opacity:1}.installer-dialog{width:min(100%,520px);padding:clamp(24px,5vw,38px);border:1px solid rgba(255,255,255,.2);border-radius:30px;background:linear-gradient(145deg,rgba(58,55,80,.98),rgba(38,37,56,.98));box-shadow:0 30px 100px rgba(0,0,0,.48);transform:translateY(18px) scale(.98);transition:transform .32s cubic-bezier(.2,.8,.2,1)}.installer-overlay.open .installer-dialog{transform:translateY(0) scale(1)}.installer-head{display:flex;align-items:center;justify-content:space-between;gap:20px}.installer-head h2{margin:0;font:700 32px/1 "Space Grotesk";letter-spacing:-.06em}.installer-close{width:40px;height:40px;border:1px solid var(--stroke);border-radius:50%;background:rgba(255,255,255,.08);color:var(--ink);font-size:22px;cursor:pointer}.installer-copy{color:var(--muted);font-size:13px;line-height:1.75;margin:18px 0 26px}.installer-label{display:block;margin-bottom:10px;font-size:11px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--mint)}.installer-port-row{display:grid;grid-template-columns:1fr auto;gap:10px}.installer-port{min-width:0;min-height:50px;padding:0 15px;border:1px solid var(--stroke);border-radius:15px;background:rgba(255,255,255,.07);color:var(--ink);font:600 12px Manrope}.installer-select{min-height:50px;padding:0 17px;border:1px solid rgba(255,255,255,.2);border-radius:15px;background:rgba(255,255,255,.1);color:var(--ink);font-size:12px;font-weight:800;cursor:pointer}.installer-flash{width:100%;margin-top:16px;min-height:54px;background:linear-gradient(110deg,var(--mint),var(--aqua));font-size:13px}.installer-status{min-height:40px;margin:16px 0 0;color:var(--muted);font-size:11px;line-height:1.65}.installer-note{margin-top:14px;padding:12px 14px;border-radius:14px;background:rgba(255,207,210,.08);border:1px solid rgba(255,207,210,.18);color:#f5dfe2;font-size:11px;line-height:1.6}.audius-credit{display:inline-flex;align-items:center;gap:10px;color:var(--muted);font-size:12px;font-weight:800}.audius-credit svg{width:25px;height:25px;flex:none}.audius-credit:hover{color:var(--ink)}.footer-inner{flex-wrap:wrap}
+
 @media(max-width:650px){
   .hero-showcase{min-height:420px;border-radius:28px}
-  .showcase-slide{inset:0 0 46px;padding:6px 8px 0}
+  .showcase-slide{inset:0;padding:6px 8px 0}
   .hero .device-illustration{width:184px!important;height:360px!important}
-  .showcase-controls{bottom:9px;gap:9px}
-  .showcase-arrow{width:31px;height:31px;flex-basis:31px}
-  .showcase-control-center{min-width:152px;gap:6px}
-  .showcase-label{font-size:7px}
-  
-  
+
   .hero-hub-screen{height:calc(100% - 56px);grid-template-columns:34px 1fr;gap:9px;padding:9px}
+
   
+
   
-  
-  
-  
-  
-  
-  
+
   
 }
-@media(max-width:380px){.hero-showcase{min-height:400px}.showcase-control-center{min-width:140px}}
+@media(max-width:380px){.hero-showcase{min-height:400px}}
 
-
-/* Shared Flock3 Hub mock-up: a plain black Windows app window, cover grid and bottom island dock. */
 .hub-app-window{
-  position:relative;z-index:2;width:min(94%,490px);aspect-ratio:1.42;min-width:0;overflow:hidden;
-  border:1px solid rgba(255,255,255,.24);border-radius:13px;background:#050607;color:#f5f5f5;
+  position:relative;z-index:2;width:min(94%,490px);aspect-ratio:1.38;min-width:0;overflow:hidden;
+  border:1px solid rgba(255,255,255,.24);border-radius:11px;background:#050607;color:#f5f5f5;
   box-shadow:0 26px 62px rgba(0,0,0,.48),0 0 0 1px rgba(0,0,0,.45);
   display:flex;flex-direction:column;transform:translateZ(0);
   transition:transform .48s cubic-bezier(.2,.75,.25,1),box-shadow .48s cubic-bezier(.2,.75,.25,1),border-color .35s ease;
 }
 .hub-app-window:hover{transform:translateY(-5px);box-shadow:0 32px 72px rgba(0,0,0,.52);border-color:rgba(255,255,255,.35)}
-.hub-app-titlebar{height:31px;flex:0 0 31px;display:flex;align-items:center;gap:8px;padding:0 0 0 11px;background:#090a0c;border-bottom:1px solid #202124;color:#e8e8e8;font:500 9px "Segoe UI",Arial,sans-serif;letter-spacing:0}
-.hub-app-title-icon{width:16px;height:16px;display:grid;place-items:center;border-radius:4px;background:#17191d;color:#f0f0f0;font:600 13px Georgia,serif}
-.hub-app-titlebar strong{font:500 10px "Segoe UI",Arial,sans-serif}
+.hub-app-titlebar{height:26px;flex:0 0 26px;display:flex;align-items:center;gap:7px;padding:0 0 0 9px;background:#090a0c;border-bottom:1px solid #202124;color:#e8e8e8;font:500 9px "Segoe UI",Arial,sans-serif;letter-spacing:0}
+.hub-app-title-logo{width:18px;height:18px;flex:0 0 18px;display:block;object-fit:contain}
+.hub-app-titlebar strong{font:500 9px "Segoe UI",Arial,sans-serif}
 .hub-window-controls{height:100%;margin-left:auto;display:flex;align-items:stretch}
-.hub-window-controls i{width:39px;display:grid;place-items:center;position:relative;color:#e5e5e5;font:400 12px "Segoe UI",Arial,sans-serif}
-.hub-window-controls .win-minimize:before{content:"";width:9px;height:1px;background:#bcbcbc}
-.hub-window-controls .win-maximize:before{content:"";width:8px;height:8px;border:1px solid #bcbcbc}
-.hub-window-controls .win-close{font-size:16px;font-weight:300}
-.hub-library{position:relative;flex:1;min-height:0;padding:14px 15px 54px;background:#050607;overflow:hidden}
-.hub-cover-grid{height:100%;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));grid-template-rows:repeat(3,minmax(0,1fr));gap:9px;align-content:center}
-.hub-cover{position:relative;display:block;min-width:0;min-height:0;overflow:hidden;aspect-ratio:1;border:1px solid rgba(255,255,255,.09);border-radius:3px;background:#191a1d;box-shadow:0 3px 9px rgba(0,0,0,.26)}
+.hub-window-controls i{width:23px;flex:0 0 23px;display:grid;place-items:center;position:relative;color:#e5e5e5;font:400 11px "Segoe UI",Arial,sans-serif}
+.hub-window-controls .win-minimize:before{content:"";width:7px;height:1px;background:#bcbcbc}
+.hub-window-controls .win-maximize:before{content:"";width:7px;height:7px;border:1px solid #bcbcbc}
+.hub-window-controls .win-close{font-size:13px;font-weight:300}
+.hub-library{position:relative;display:flex;align-items:center;justify-content:center;flex:1;min-height:0;padding:9px 12px 41px;background:#050607;overflow:hidden}
+.hub-cover-grid{width:100%;height:auto;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));grid-template-rows:repeat(3,auto);gap:8px;align-content:center;justify-content:center}
+.hub-cover{position:relative;display:block;width:100%;height:auto;min-width:0;min-height:0;align-self:center;justify-self:center;overflow:hidden;aspect-ratio:1;border:1px solid rgba(255,255,255,.09);border-radius:3px;background:#191a1d;box-shadow:0 3px 9px rgba(0,0,0,.26)}
 .hub-cover:before,.hub-cover:after{content:"";position:absolute;pointer-events:none}
 .hub-cover:before{inset:12% 16%;border-radius:50%;border:1px solid rgba(255,255,255,.32);box-shadow:0 0 0 7px rgba(255,255,255,.055),0 0 0 15px rgba(255,255,255,.04)}
 .hub-cover:after{width:35%;height:35%;left:33%;top:33%;border-radius:50%;background:rgba(0,0,0,.25);box-shadow:inset 0 0 0 1px rgba(255,255,255,.27)}
@@ -335,40 +304,65 @@ html{scroll-behavior:auto}
 .cover-13{background:radial-gradient(circle at 72% 25%,#d9b1a0 0 12%,transparent 13%),linear-gradient(135deg,#344d4c,#9b9d78 52%,#242f2e)}
 .cover-14{background:linear-gradient(135deg,#e2bb8d,#ad665b 48%,#433747)}.cover-14:before{inset:12%;border:1px solid rgba(255,255,255,.48);border-radius:50% 0 50% 0;transform:rotate(25deg)}
 .cover-15{background:radial-gradient(circle at 50% 50%,#e9d2b3 0 9%,transparent 10%),linear-gradient(145deg,#45516d,#242b3b 55%,#151821)}
-.hub-island{position:absolute;z-index:3;left:50%;bottom:10px;transform:translateX(-50%);width:min(72%,280px);height:38px;display:flex;align-items:center;justify-content:space-evenly;gap:5px;padding:4px 9px;border:1px solid rgba(255,255,255,.16);border-radius:999px;background:rgba(28,29,32,.94);box-shadow:0 7px 22px rgba(0,0,0,.55),inset 0 1px rgba(255,255,255,.07);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px)}
-.hub-island-item{width:30px;height:29px;display:grid;place-items:center;border-radius:50%;color:#aeb0b5;transition:background .25s ease,color .25s ease,transform .25s ease}
-.hub-island-item svg{width:15px;height:15px;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+.hub-island{position:absolute;z-index:3;left:50%;bottom:7px;transform:translateX(-50%);width:144px;height:27px;display:grid;grid-template-columns:repeat(5,20px);align-items:center;justify-content:space-between;gap:0;padding:3px 9px;border:1px solid rgba(255,255,255,.16);border-radius:999px;background:rgba(28,29,32,.96);box-shadow:0 6px 17px rgba(0,0,0,.52),inset 0 1px rgba(255,255,255,.07);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px)}
+.hub-island-item{width:20px;height:20px;display:grid;place-items:center;justify-self:center;border-radius:50%;color:#aeb0b5;line-height:0;transition:background .25s ease,color .25s ease,transform .25s ease}
+.hub-island-item svg{display:block;width:12px;height:12px;overflow:visible;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
 .hub-island-item.is-selected{background:#3b3d42;color:#fff}
-.hub-island-item:hover{background:#4a4c52;color:#fff;transform:translateY(-2px)}
+.hub-island-item:hover{background:#4a4c52;color:#fff;transform:translateY(-1px)}
 @media(max-width:900px){.hub-app-window{width:min(95%,470px)}}
+
+.installer-overlay{position:fixed;inset:0;z-index:200;display:none;place-items:center;padding:22px;background:rgba(12,11,22,.72);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);opacity:0;transition:opacity .28s ease}.installer-overlay.open{display:grid;opacity:1}.installer-dialog{width:min(100%,520px);padding:clamp(24px,5vw,38px);border:1px solid rgba(255,255,255,.2);border-radius:30px;background:linear-gradient(145deg,rgba(58,55,80,.98),rgba(38,37,56,.98));box-shadow:0 30px 100px rgba(0,0,0,.48);transform:translateY(18px) scale(.98);transition:transform .32s cubic-bezier(.2,.8,.2,1)}.installer-overlay.open .installer-dialog{transform:translateY(0) scale(1)}.installer-head{display:flex;align-items:center;justify-content:space-between;gap:20px}.installer-head h2{margin:0;font:700 32px/1 "Space Grotesk";letter-spacing:-.06em}.installer-close{width:40px;height:40px;border:1px solid var(--stroke);border-radius:50%;background:rgba(255,255,255,.08);color:var(--ink);font-size:22px;cursor:pointer}.installer-copy{color:var(--muted);font-size:13px;line-height:1.75;margin:18px 0 26px}.installer-label{display:block;margin-bottom:10px;font-size:11px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--mint)}.installer-port-row{display:grid;grid-template-columns:1fr auto;gap:10px}.installer-port{min-width:0;min-height:50px;padding:0 15px;border:1px solid var(--stroke);border-radius:15px;background:rgba(255,255,255,.07);color:var(--ink);font:600 12px Manrope}.installer-select{min-height:50px;padding:0 17px;border:1px solid rgba(255,255,255,.2);border-radius:15px;background:rgba(255,255,255,.1);color:var(--ink);font-size:12px;font-weight:800;cursor:pointer}.installer-flash{width:100%;margin-top:16px;min-height:54px;background:linear-gradient(110deg,var(--mint),var(--aqua));font-size:13px}.installer-status{min-height:40px;margin:16px 0 0;color:var(--muted);font-size:11px;line-height:1.65}.installer-note{margin-top:14px;padding:12px 14px;border-radius:14px;background:rgba(255,207,210,.08);border:1px solid rgba(255,207,210,.18);color:#f5dfe2;font-size:11px;line-height:1.6}.audius-credit{display:inline-flex;align-items:center;gap:10px;color:var(--muted);font-size:12px;font-weight:800}.audius-credit svg{width:25px;height:25px;flex:none}.audius-credit:hover{color:var(--ink)}.footer-inner{flex-wrap:wrap}
+
 @media(max-width:650px){
-  .hub-app-window{width:97%;aspect-ratio:1.22;border-radius:10px}
-  .hub-app-titlebar{height:27px;flex-basis:27px;padding-left:8px}
-  .hub-window-controls i{width:30px}
-  .hub-library{padding:10px 9px 45px}
+  .hub-app-window{width:97%;aspect-ratio:1.28;border-radius:9px}
+  .hub-app-titlebar{height:23px;flex-basis:23px;padding-left:7px;gap:6px}
+  .hub-app-title-logo{width:15px;height:15px;flex-basis:15px}
+  .hub-window-controls i{width:19px;flex-basis:19px}
+  .hub-window-controls .win-minimize:before{width:6px}
+  .hub-window-controls .win-maximize:before{width:6px;height:6px}
+  .hub-window-controls .win-close{font-size:12px}
+  .hub-library{padding:8px 8px 35px}
   .hub-cover-grid{gap:6px}
-  .hub-island{bottom:7px;width:min(78%,250px);height:33px;padding:3px 7px}
-  .hub-island-item{width:26px;height:25px}
-  .hub-island-item svg{width:14px;height:14px}
+  .hub-island{bottom:6px;width:130px;height:24px;grid-template-columns:repeat(5,18px);padding:2px 7px}
+  .hub-island-item{width:18px;height:18px}
+  .hub-island-item svg{width:11px;height:11px}
 }
 
+
+.hero h1.hero-slogan{position:relative;min-height:3.15em;isolation:isolate}
+.hero-slogan .slogan-words,.hero-slogan .slogan-definition{position:absolute;inset:0;display:block}
+.hero-slogan .slogan-words{opacity:1;animation:sloganWordsOut .8s cubic-bezier(.2,.75,.25,1) 2.85s forwards}
+.hero-slogan .slogan-word{display:inline-block;opacity:0;transform:translateY(24px);animation:sloganWordIn .72s cubic-bezier(.18,.72,.22,1) forwards}
+.hero-slogan .slogan-word:nth-of-type(1){animation-delay:.05s}
+.hero-slogan .slogan-word:nth-of-type(2){animation-delay:.48s}
+.hero-slogan .slogan-word:nth-of-type(3){animation-delay:.91s}
+.hero-slogan .slogan-definition{max-width:720px;font-size:.72em;line-height:1.02;letter-spacing:-.075em;opacity:0;transform:translateY(22px);animation:sloganDefinitionIn .9s cubic-bezier(.18,.72,.22,1) 2.8s forwards}
+.product-actions{margin-top:25px}
+@keyframes sloganWordIn{to{opacity:1;transform:translateY(0)}}
+@keyframes sloganWordsOut{to{opacity:0;transform:translateY(-14px);visibility:hidden}}
+@keyframes sloganDefinitionIn{to{opacity:1;transform:translateY(0)}}
+
+.installer-overlay{position:fixed;inset:0;z-index:200;display:none;place-items:center;padding:22px;background:rgba(12,11,22,.72);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);opacity:0;transition:opacity .28s ease}.installer-overlay.open{display:grid;opacity:1}.installer-dialog{width:min(100%,520px);padding:clamp(24px,5vw,38px);border:1px solid rgba(255,255,255,.2);border-radius:30px;background:linear-gradient(145deg,rgba(58,55,80,.98),rgba(38,37,56,.98));box-shadow:0 30px 100px rgba(0,0,0,.48);transform:translateY(18px) scale(.98);transition:transform .32s cubic-bezier(.2,.8,.2,1)}.installer-overlay.open .installer-dialog{transform:translateY(0) scale(1)}.installer-head{display:flex;align-items:center;justify-content:space-between;gap:20px}.installer-head h2{margin:0;font:700 32px/1 "Space Grotesk";letter-spacing:-.06em}.installer-close{width:40px;height:40px;border:1px solid var(--stroke);border-radius:50%;background:rgba(255,255,255,.08);color:var(--ink);font-size:22px;cursor:pointer}.installer-copy{color:var(--muted);font-size:13px;line-height:1.75;margin:18px 0 26px}.installer-label{display:block;margin-bottom:10px;font-size:11px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--mint)}.installer-port-row{display:grid;grid-template-columns:1fr auto;gap:10px}.installer-port{min-width:0;min-height:50px;padding:0 15px;border:1px solid var(--stroke);border-radius:15px;background:rgba(255,255,255,.07);color:var(--ink);font:600 12px Manrope}.installer-select{min-height:50px;padding:0 17px;border:1px solid rgba(255,255,255,.2);border-radius:15px;background:rgba(255,255,255,.1);color:var(--ink);font-size:12px;font-weight:800;cursor:pointer}.installer-flash{width:100%;margin-top:16px;min-height:54px;background:linear-gradient(110deg,var(--mint),var(--aqua));font-size:13px}.installer-status{min-height:40px;margin:16px 0 0;color:var(--muted);font-size:11px;line-height:1.65}.installer-note{margin-top:14px;padding:12px 14px;border-radius:14px;background:rgba(255,207,210,.08);border:1px solid rgba(255,207,210,.18);color:#f5dfe2;font-size:11px;line-height:1.6}.audius-credit{display:inline-flex;align-items:center;gap:10px;color:var(--muted);font-size:12px;font-weight:800}.audius-credit svg{width:25px;height:25px;flex:none}.audius-credit:hover{color:var(--ink)}.footer-inner{flex-wrap:wrap}
+
+@media(max-width:650px){.hero h1.hero-slogan{min-height:3.6em}.hero-slogan .slogan-definition{font-size:.7em;max-width:100%;line-height:1.04}}
+@media(prefers-reduced-motion:reduce){.hero-slogan .slogan-words{display:none;animation:none}.hero-slogan .slogan-word{animation:none;opacity:1;transform:none}.hero-slogan .slogan-definition{position:relative;opacity:1;transform:none;animation:none}}
 </style>
 </head>
 <body>
 <div class="scroll-progress" id="scrollProgress"></div>
 <header class="topbar"><div class="topbar-inner">
 <a aria-label="Flock3 home" class="brand" href="#home"><img alt="" src="assets/flock3-logo.png"/><span>Flock3</span></a>
-<nav class="nav" id="mainNav"><a href="#home">Home</a><a href="#products">Products</a><a href="#faq">FAQ</a></nav>
+<nav class="nav" id="mainNav"><a href="#home">Home</a><a href="#products">Flock3</a><a href="#faq">FAQ</a></nav>
 <button aria-expanded="false" aria-label="Open navigation" class="menu-toggle" id="menuToggle">☰</button>
 </div></header>
 <main id="top">
 <section class="hero wrap" id="home">
-<div class="hero-copy reveal"><h1>One device.<br/><span>More ways</span><br/>to create.</h1><p class="hero-lead">Flock3 brings hardware, custom firmware and desktop software together around one capable E-Paper device. A focused ecosystem designed to work as one.</p><div class="actions"><a class="btn" href="#products">Explore products <span>↘</span></a><a class="btn secondary" href="#faq">Common questions</a></div></div>
+<div class="hero-copy reveal"><h1 class="hero-slogan" aria-label="Listen. Download. Enjoy. Flock3 is an ecosystem for free, unlimited music."><span class="slogan-words" aria-hidden="true"><span class="slogan-word">Listen.</span><br/><span class="slogan-word">Download.</span><br/><span class="slogan-word">Enjoy.</span></span><span class="slogan-definition">Flock3 is an ecosystem for free, unlimited music.</span></h1><p class="hero-lead">Listen online for free, download tracks and build your playlists across a dedicated E-Paper music player and a Windows desktop app.</p><div class="actions"><a class="btn" href="#products">Explore Flock3 <span>↘</span></a><a class="btn secondary" href="#faq">Common questions</a></div></div>
 <div class="hero-visual reveal">
   <div class="device-stage hero-showcase" id="heroShowcase" aria-label="Flock3 product showcase" aria-roledescription="carousel" tabindex="0">
     <div class="showcase-slides" id="showcaseSlides">
-      <div class="showcase-slide is-active" data-showcase-slide="0" aria-label="Flock3+ E-Paper device" aria-hidden="false">
-        <div aria-label="Stylized front view of the LILYGO T5-4.7-S3 Pro" class="device-illustration showcase-device">
+      <div class="showcase-slide is-active" data-showcase-slide="0" aria-label="Flock3+ online music player on a 4.7-inch E-Paper device" aria-hidden="false">
+        <div aria-label="Stylized front view of the 4.7-inch E-Paper device manufactured by Shenzhen Xinyuan Electronic Technology Co., Ltd." class="device-illustration showcase-device">
           <div class="device-face"><div class="device-screen"></div></div>
           <span class="device-touch" aria-hidden="true"></span>
           <span class="device-button side-left upper" aria-hidden="true"></span><span class="device-button side-left lower" aria-hidden="true"></span>
@@ -378,7 +372,7 @@ html{scroll-behavior:auto}
       <div class="showcase-slide" data-showcase-slide="1" aria-label="Flock3 Hub for Windows" aria-hidden="true">
         <div class="hub-app-window" aria-label="Flock3 Hub Windows app preview: black window with a grid of album covers and a bottom control dock">
           <div class="hub-app-titlebar">
-            <span class="hub-app-title-icon">♪</span><strong>Flock3 Hub</strong>
+            <img class="hub-app-title-logo" src="assets/flock3-logo.png" alt=""/><strong>Flock3 Hub</strong>
             <div class="hub-window-controls" aria-hidden="true"><i class="win-minimize"></i><i class="win-maximize"></i><i class="win-close">×</i></div>
           </div>
           <div class="hub-library">
@@ -392,31 +386,26 @@ html{scroll-behavior:auto}
               <span class="hub-island-item" title="Favorites" aria-label="Favorites"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 3 2.7 5.5 6.1.9-4.4 4.3 1 6.1-5.4-2.9-5.4 2.9 1-6.1-4.4-4.3 6.1-.9L12 3Z"/></svg></span>
               <span class="hub-island-item" title="Search" aria-label="Search"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.8"/><path d="m16 16 5 5"/></svg></span>
               <span class="hub-island-item" title="Downloads" aria-label="Downloads"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12m-5-5 5 5 5-5M4 19v2h16v-2"/></svg></span>
-              <span class="hub-island-item" title="Settings" aria-label="Settings"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 8.2a3.8 3.8 0 1 0 0 7.6 3.8 3.8 0 0 0 0-7.6Z"/><path d="m19.4 13.5 1.2.9-1.2 2.1-1.5-.5a7.9 7.9 0 0 1-1.5.9l-.2 1.6h-2.4l-.5-1.5a7.7 7.7 0 0 1-1.7 0l-.8 1.3-2.1-1.2.5-1.5a7.9 7.9 0 0 1-.9-1.5l-1.6-.2v-2.4l1.5-.5a7.7 7.7 0 0 1 0-1.7l-1.3-.8 1.2-2.1 1.5.5a7.9 7.9 0 0 1 1.5-.9l.2-1.6h2.4l.5 1.5a7.7 7.7 0 0 1 1.7 0l.8-1.3 2.1 1.2-.5 1.5a7.9 7.9 0 0 1 .9 1.5l1.6.2v2.4l-1.5.5a7.7 7.7 0 0 1 0 1.7Z"/></svg></span>
+              <span class="hub-island-item" title="Settings" aria-label="Settings"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19.14 12.94c.04-.31.06-.62.06-.94s-.02-.63-.07-.94l2.03-1.58a.5.5 0 0 0 .12-.64l-1.92-3.32a.5.5 0 0 0-.61-.22l-2.39.96a7.28 7.28 0 0 0-1.63-.95L14.37 2.8a.5.5 0 0 0-.5-.42h-3.84a.5.5 0 0 0-.5.42L9.17 5.31c-.59.23-1.14.55-1.63.95l-2.39-.96a.5.5 0 0 0-.61.22L2.62 8.84a.5.5 0 0 0 .12.64l2.03 1.58c-.05.31-.07.62-.07.94s.02.63.07.94l-2.03 1.58a.5.5 0 0 0-.12.64l1.92 3.32a.5.5 0 0 0 .61.22l2.39-.96c.49.4 1.04.72 1.63.95l.36 2.51a.5.5 0 0 0 .5.42h3.84a.5.5 0 0 0 .5-.42l.36-2.51c.59-.23 1.14-.55 1.63-.95l2.39.96a.5.5 0 0 0 .61-.22l1.92-3.32a.5.5 0 0 0-.12-.64l-2.03-1.58ZM12 15.5a3.5 3.5 0 1 1 0-7 3.5 3.5 0 0 1 0 7Z"/></svg></span>
             </nav>
           </div>
         </div>
       </div>
     </div>
-    <div class="showcase-controls" aria-label="Showcase controls">
-      <button class="showcase-arrow" type="button" id="showcasePrev" aria-label="Previous model">‹</button>
-      <div class="showcase-control-center"><span class="showcase-label" id="showcaseLabel">FLOCK3+ · E-PAPER DEVICE</span><div class="showcase-dots"><button type="button" class="showcase-dot is-active" data-showcase-go="0" aria-label="Show Flock3+ device" aria-current="true"></button><button type="button" class="showcase-dot" data-showcase-go="1" aria-label="Show Flock3 Hub for Windows" aria-current="false"></button></div></div>
-      <button class="showcase-arrow" type="button" id="showcaseNext" aria-label="Next model">›</button>
-    </div>
+    
   </div>
 </div>
 <div class="hero-scroll"><span class="scroll-mark"></span> SCROLL TO EXPLORE</div>
 </section>
 
-
 <section class="section products" id="products">
 <div class="section-head reveal"><div><h2>Made to work<br/>as one.</h2></div><p>The hardware, device firmware and desktop companion each have a distinct role. Together, they form the Flock3 ecosystem.</p></div>
 <div class="product-list">
-<article class="product-card reveal"><div class="product-info"><h3>Flock3<span style="color:var(--mauve)">+</span></h3><p>The hardware foundation of Flock3: a 4.7-inch E-Paper platform powered by the ESP32-S3. The device provides the display, controls and connectivity for the ecosystem.</p><div class="product-meta"><span class="tag">4.7″ E-PAPER</span><span class="tag">ESP32-S3</span><span class="tag">WI-FI</span></div></div><div class="product-art"><div aria-label="Front view of the LILYGO T5-4.7-S3 Pro" class="device-illustration"><div class="device-face"><div class="device-screen"></div></div><span class="device-touch" aria-hidden="true"></span><span class="device-button side-left upper" aria-hidden="true"></span><span class="device-button side-left lower" aria-hidden="true"></span><span class="device-button side-right upper" aria-hidden="true"></span><span class="device-button side-right lower" aria-hidden="true"></span></div></div></article>
+<article class="product-card reveal"><div class="product-info"><h3>Flock3<span style="color:var(--mauve)">+</span></h3><p>Flock3+ is firmware for an online music player. It lets you listen to music online for free, download tracks and organize your own playlists. It supports MP3 and WAV playback on the 4.7-inch E-Paper display of a device manufactured by Shenzhen Xinyuan Electronic Technology Co., Ltd.</p><div class="actions product-actions"><button class="btn install-btn" id="openInstaller" type="button">Install <span>↓</span></button></div></div><div class="product-art"><div aria-label="Front view of the 4.7-inch E-Paper device manufactured by Shenzhen Xinyuan Electronic Technology Co., Ltd." class="device-illustration"><div class="device-face"><div class="device-screen"></div></div><span class="device-touch" aria-hidden="true"></span><span class="device-button side-left upper" aria-hidden="true"></span><span class="device-button side-left lower" aria-hidden="true"></span><span class="device-button side-right upper" aria-hidden="true"></span><span class="device-button side-right lower" aria-hidden="true"></span></div></div></article>
 
-<article class="product-card reveal"><div class="product-info"><h3>Flock3 Hub</h3><p>A Windows desktop music companion with a visual grid of track covers and a compact control dock. Flock3 Hub is currently in development.</p><div class="product-meta"><span class="tag">WINDOWS</span><span class="tag">DESKTOP COMPANION</span></div><span class="status">IN DEVELOPMENT</span></div><div class="product-art"><div class="hub-app-window" aria-label="Flock3 Hub Windows app preview: black window with a grid of album covers and a bottom control dock">
+<article class="product-card reveal"><div class="product-info"><h3>Flock3 Hub</h3><p>Flock3 Hub is a Windows desktop music player that lets you listen to music online for free, download tracks, and organize your own playlists. It supports MP3 and WAV audio playback on your PC. The app is currently in development.</p></div><div class="product-art"><div class="hub-app-window" aria-label="Flock3 Hub Windows app preview: black window with a grid of album covers and a bottom control dock">
           <div class="hub-app-titlebar">
-            <span class="hub-app-title-icon">♪</span><strong>Flock3 Hub</strong>
+            <img class="hub-app-title-logo" src="assets/flock3-logo.png" alt=""/><strong>Flock3 Hub</strong>
             <div class="hub-window-controls" aria-hidden="true"><i class="win-minimize"></i><i class="win-maximize"></i><i class="win-close">×</i></div>
           </div>
           <div class="hub-library">
@@ -430,20 +419,21 @@ html{scroll-behavior:auto}
               <span class="hub-island-item" title="Favorites" aria-label="Favorites"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 3 2.7 5.5 6.1.9-4.4 4.3 1 6.1-5.4-2.9-5.4 2.9 1-6.1-4.4-4.3 6.1-.9L12 3Z"/></svg></span>
               <span class="hub-island-item" title="Search" aria-label="Search"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.8"/><path d="m16 16 5 5"/></svg></span>
               <span class="hub-island-item" title="Downloads" aria-label="Downloads"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12m-5-5 5 5 5-5M4 19v2h16v-2"/></svg></span>
-              <span class="hub-island-item" title="Settings" aria-label="Settings"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 8.2a3.8 3.8 0 1 0 0 7.6 3.8 3.8 0 0 0 0-7.6Z"/><path d="m19.4 13.5 1.2.9-1.2 2.1-1.5-.5a7.9 7.9 0 0 1-1.5.9l-.2 1.6h-2.4l-.5-1.5a7.7 7.7 0 0 1-1.7 0l-.8 1.3-2.1-1.2.5-1.5a7.9 7.9 0 0 1-.9-1.5l-1.6-.2v-2.4l1.5-.5a7.7 7.7 0 0 1 0-1.7l-1.3-.8 1.2-2.1 1.5.5a7.9 7.9 0 0 1 1.5-.9l.2-1.6h2.4l.5 1.5a7.7 7.7 0 0 1 1.7 0l.8-1.3 2.1 1.2-.5 1.5a7.9 7.9 0 0 1 .9 1.5l1.6.2v2.4l-1.5.5a7.7 7.7 0 0 1 0 1.7Z"/></svg></span>
+              <span class="hub-island-item" title="Settings" aria-label="Settings"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19.14 12.94c.04-.31.06-.62.06-.94s-.02-.63-.07-.94l2.03-1.58a.5.5 0 0 0 .12-.64l-1.92-3.32a.5.5 0 0 0-.61-.22l-2.39.96a7.28 7.28 0 0 0-1.63-.95L14.37 2.8a.5.5 0 0 0-.5-.42h-3.84a.5.5 0 0 0-.5.42L9.17 5.31c-.59.23-1.14.55-1.63.95l-2.39-.96a.5.5 0 0 0-.61.22L2.62 8.84a.5.5 0 0 0 .12.64l2.03 1.58c-.05.31-.07.62-.07.94s.02.63.07.94l-2.03 1.58a.5.5 0 0 0-.12.64l1.92 3.32a.5.5 0 0 0 .61.22l2.39-.96c.49.4 1.04.72 1.63.95l.36 2.51a.5.5 0 0 0 .5.42h3.84a.5.5 0 0 0 .5-.42l.36-2.51c.59-.23 1.14-.55 1.63-.95l2.39.96a.5.5 0 0 0 .61-.22l1.92-3.32a.5.5 0 0 0-.12-.64l-2.03-1.58ZM12 15.5a3.5 3.5 0 1 1 0-7 3.5 3.5 0 0 1 0 7Z"/></svg></span>
             </nav>
           </div>
         </div></div></article>
 </div>
 </section>
 <section class="section" id="faq"><div class="section-head reveal"><div><h2>Good to know.</h2></div><p>A few details to help you understand what Flock3 is — and what is still being built.</p></div><div class="faq reveal">
-<div class="faq-item"><button aria-expanded="false" class="faq-button"><span>What exactly is Flock3?</span><span>+</span></button><div class="faq-answer"><p>Flock3 is an ecosystem built around the LILYGO T5-4.7-S3 Pro. It consists of the device hardware, Flock3+ firmware and the Flock3 Hub desktop companion.</p></div></div>
+<div class="faq-item"><button aria-expanded="false" class="faq-button"><span>What exactly is Flock3?</span><span>+</span></button><div class="faq-answer"><p>Flock3 is an ecosystem built around two music players. Flock3+ is firmware for a 4.7-inch E-Paper device manufactured by Shenzhen Xinyuan Electronic Technology Co., Ltd. Flock3 Hub is the Windows desktop player. Both are designed for free online listening, track downloads, playlist management, and MP3 and WAV playback.</p></div></div>
 <div class="faq-item"><button aria-expanded="false" class="faq-button"><span>Is Flock3 Hub available yet?</span><span>+</span></button><div class="faq-answer"><p>Not yet. Flock3 Hub is currently in development. This page does not offer downloads for unfinished software.</p></div></div>
-<div class="faq-item"><button aria-expanded="false" class="faq-button"><span>Is Flock3+ the same as Flock3 Hub?</span><span>+</span></button><div class="faq-answer"><p>No. Flock3+ is firmware that runs on the device. Flock3 Hub is a separate Windows desktop application designed to accompany the ecosystem.</p></div></div>
+<div class="faq-item"><button aria-expanded="false" class="faq-button"><span>Is Flock3+ the same as Flock3 Hub?</span><span>+</span></button><div class="faq-answer"><p>No. Flock3+ is firmware for the 4.7-inch E-Paper music player, while Flock3 Hub is a separate Windows desktop music player. Both are designed for free online listening, track downloads, playlist management, and MP3 and WAV playback.</p></div></div>
 </div></section>
 
 </main>
-<footer class="footer reveal"><div class="footer-inner"><a class="footer-brand" href="#home"><img alt="" src="assets/flock3-logo.png"/><span>Flock3</span></a><a class="github-link" href="https://github.com/Shon-Lua/Flock3" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span></a></div></footer>
+<div class="installer-overlay" id="installerOverlay" role="dialog" aria-modal="true" aria-labelledby="installerTitle" aria-hidden="true"><div class="installer-dialog"><div class="installer-head"><h2 id="installerTitle">Install Flock3+</h2><button class="installer-close" id="closeInstaller" type="button" aria-label="Close installer">×</button></div><p class="installer-copy">Connect your device over USB, select its serial port, then continue to the firmware installation step.</p><label class="installer-label" for="installerPort">Device port</label><div class="installer-port-row"><div class="installer-port" id="installerPort">No port selected</div><button class="installer-select" id="selectPort" type="button">Select port</button></div><button class="btn installer-flash" id="flashFirmware" type="button">Flash</button><p class="installer-status" id="installerStatus" aria-live="polite">Select a compatible USB serial port to begin.</p><div class="installer-note">Firmware flashing is not active yet: the downloadable firmware image and flashing configuration have not been published. The port selector is ready, but Flash will not write anything to your device.</div></div></div>
+<footer class="footer reveal"><div class="footer-inner"><a class="footer-brand" href="#home"><img alt="" src="assets/flock3-logo.png"/><span>Flock3</span></a><a class="audius-credit" href="https://audius.co" target="_blank" rel="noopener noreferrer" aria-label="Streaming powered by Audius"><svg viewBox="0 0 32 32" role="img" aria-label="Audius"><path fill="#CC0FE0" d="M16 2.5 29 25H3L16 2.5Zm0 7.2L9.2 21.5h13.6L16 9.7Z"/><path fill="#CC0FE0" d="M13.7 14.1h4.6v7.4h-4.6z"/></svg><span>Streaming powered by Audius</span></a><a class="github-link" href="https://github.com/Shon-Lua/Flock3" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span></a></div></footer>
 <script>
 const menuButton=document.getElementById('menuToggle');
 const nav=document.getElementById('mainNav');
@@ -478,8 +468,6 @@ if('IntersectionObserver' in window){
 }else{
   revealItems.forEach(el=>el.classList.add('visible'));
 }
-
-// Scroll anchors with a controlled easing curve so navigation stays smooth in embedded browsers too.
 let anchorScrollFrame=0;
 function stopAnchorScroll(){
   if(anchorScrollFrame){cancelAnimationFrame(anchorScrollFrame);anchorScrollFrame=0;}
@@ -519,8 +507,6 @@ document.addEventListener('click',event=>{
   if(location.hash!==hash)history.pushState(null,'',hash);
   scrollToAnchor(target);
 });
-
-// Let direct user input interrupt a programmatic scroll immediately.
 ['wheel','touchstart','pointerdown'].forEach(type=>addEventListener(type,stopAnchorScroll,{passive:true}));
 addEventListener('keydown',event=>{
   if(['ArrowDown','ArrowUp','PageDown','PageUp','Home','End',' '].includes(event.key))stopAnchorScroll();
@@ -539,15 +525,9 @@ document.querySelectorAll('.faq-button').forEach(button=>button.addEventListener
   const answer=item.querySelector('.faq-answer');
   answer.style.maxHeight=open?answer.scrollHeight+'px':'0';
 }));
-
-
-// Accessible Home carousel: manual navigation, autoplay, keyboard and touch support.
 const showcase=document.getElementById('heroShowcase');
 if(showcase){
   const slides=[...showcase.querySelectorAll('[data-showcase-slide]')];
-  const dots=[...showcase.querySelectorAll('[data-showcase-go]')];
-  const label=document.getElementById('showcaseLabel');
-  const labels=['FLOCK3+ · E-PAPER DEVICE','FLOCK3 HUB · WINDOWS APP'];
   let activeSlide=0;
   let autoplayTimer=0;
   let cleanupTimer=0;
@@ -569,25 +549,18 @@ if(showcase){
     previous.setAttribute('aria-hidden','true');
     current.setAttribute('aria-hidden','false');
     activeSlide=next;
-    dots.forEach((dot,index)=>{
-      const selected=index===activeSlide;
-      dot.classList.toggle('is-active',selected);
-      dot.setAttribute('aria-current',String(selected));
-    });
-    if(label){label.textContent=labels[activeSlide];label.animate([{opacity:.25,transform:'translateY(4px)'},{opacity:1,transform:'translateY(0)'}],{duration:430,easing:'cubic-bezier(.2,.75,.25,1)'});}
     clearTimeout(cleanupTimer);
     cleanupTimer=setTimeout(()=>previous.classList.remove('is-leaving','leaves-right'),motionDuration);
     restartAutoplay();
   }
+
   function restartAutoplay(){
     clearInterval(autoplayTimer);
-    if(!document.hidden&&!showcase.matches(':hover')&&!showcase.contains(document.activeElement)){
-      autoplayTimer=setInterval(()=>showSlide(activeSlide+1,1),7200);
+    if(!document.hidden&&slides.length>1){
+      autoplayTimer=setInterval(()=>showSlide(activeSlide+1,1),4500);
     }
   }
-  document.getElementById('showcasePrev')?.addEventListener('click',()=>showSlide(activeSlide-1,-1));
-  document.getElementById('showcaseNext')?.addEventListener('click',()=>showSlide(activeSlide+1,1));
-  dots.forEach(dot=>dot.addEventListener('click',()=>showSlide(Number(dot.dataset.showcaseGo),Number(dot.dataset.showcaseGo)>activeSlide?1:-1)));
+
   showcase.addEventListener('keydown',event=>{
     if(event.key==='ArrowRight'){event.preventDefault();showSlide(activeSlide+1,1)}
     if(event.key==='ArrowLeft'){event.preventDefault();showSlide(activeSlide-1,-1)}
@@ -599,13 +572,26 @@ if(showcase){
     const dy=event.clientY-touchStartY;
     if(Math.abs(dx)>48&&Math.abs(dx)>Math.abs(dy)*1.2)showSlide(activeSlide+(dx<0?1:-1),dx<0?1:-1);
   });
-  showcase.addEventListener('mouseenter',()=>clearInterval(autoplayTimer));
-  showcase.addEventListener('mouseleave',restartAutoplay);
-  showcase.addEventListener('focusin',()=>clearInterval(autoplayTimer));
-  showcase.addEventListener('focusout',()=>setTimeout(restartAutoplay,50));
   document.addEventListener('visibilitychange',restartAutoplay);
   restartAutoplay();
 }
+
+
+const installerOverlay=document.getElementById('installerOverlay');
+const installerStatus=document.getElementById('installerStatus');
+const installerPortLabel=document.getElementById('installerPort');
+let selectedSerialPort=null;
+function closeInstaller(){installerOverlay.classList.remove('open');installerOverlay.setAttribute('aria-hidden','true');document.body.style.overflow='';}
+document.getElementById('openInstaller').addEventListener('click',()=>{installerOverlay.classList.add('open');installerOverlay.setAttribute('aria-hidden','false');document.body.style.overflow='hidden';document.getElementById('closeInstaller').focus();});
+document.getElementById('closeInstaller').addEventListener('click',closeInstaller);
+installerOverlay.addEventListener('click',event=>{if(event.target===installerOverlay)closeInstaller();});
+addEventListener('keydown',event=>{if(event.key==='Escape'&&installerOverlay.classList.contains('open'))closeInstaller();});
+document.getElementById('selectPort').addEventListener('click',async()=>{
+  if(!('serial' in navigator)){installerStatus.textContent='Web Serial is unavailable in this browser. Open this site in a Chromium-based browser over HTTPS or localhost.';return;}
+  try{selectedSerialPort=await navigator.serial.requestPort();const info=selectedSerialPort.getInfo?.()||{};const vendor=info.usbVendorId?`USB ${info.usbVendorId.toString(16).toUpperCase()}`:'USB serial device';installerPortLabel.textContent=vendor+(info.usbProductId?` · ${info.usbProductId.toString(16).toUpperCase()}`:'');installerStatus.textContent='Port selected. The firmware image is not published yet, so no flashing operation can start.';}
+  catch(error){if(error.name==='NotFoundError')installerStatus.textContent='No port selected.';else installerStatus.textContent='Could not select the port: '+error.message;}
+});
+document.getElementById('flashFirmware').addEventListener('click',()=>{installerStatus.textContent=selectedSerialPort?'Port is selected, but flashing is unavailable until the Flock3+ firmware binary and flashing manifest are added to the website. No data has been sent to the device.':'Select a USB serial port first. The firmware image is not published yet.';});
 
 function updateScrollUI(){
   const max=document.documentElement.scrollHeight-innerHeight;
