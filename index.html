@@ -1,14 +1,14 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="theme-color" content="#29283b">
-<meta name="description" content="Flock3 is an ecosystem for the LILYGO T5-4.7-S3 Pro, its Flock3+ firmware and the Flock3 Hub desktop companion.">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="#29283b" name="theme-color"/>
+<meta content="Flock3 is an ecosystem for the LILYGO T5-4.7-S3 Pro, its Flock3+ firmware and the Flock3 Hub desktop companion." name="description"/>
 <title>Flock3 — A connected device ecosystem</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;family=Space+Grotesk:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
 <style>
 :root{
   --lemon:#fbf8cc;--petal:#fde4cf;--rose:#ffcfd2;--orchid:#f1c0e8;--mauve:#cfbaf0;
@@ -18,77 +18,612 @@
   --stroke:rgba(255,255,255,.17);--shadow:0 22px 65px rgba(12,10,29,.27);
   --max:1320px;--radius:30px;
 }
-*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:94px}body{margin:0;color:var(--ink);font-family:Manrope,Arial,sans-serif;background:radial-gradient(ellipse at 8% 8%,rgba(207,186,240,.18),transparent 34%),radial-gradient(ellipse at 92% 26%,rgba(142,236,245,.13),transparent 33%),radial-gradient(ellipse at 52% 82%,rgba(241,192,232,.11),transparent 40%),linear-gradient(135deg,#29283b,#343149 55%,#29283b);background-attachment:fixed;-webkit-font-smoothing:antialiased;overflow-x:hidden}
-body:before{content:"";position:fixed;inset:0;pointer-events:none;z-index:-1;opacity:.22;background-image:radial-gradient(rgba(255,255,255,.22) .7px,transparent .7px);background-size:22px 22px}a{color:inherit;text-decoration:none}button{font:inherit}img{display:block;max-width:100%}::selection{background:var(--mauve);color:#28263b}
+*{box-sizing:border-box}html{scroll-behavior:auto;scroll-padding-top:94px}body{margin:0;color:var(--ink);font-family:Manrope,Arial,sans-serif;background:radial-gradient(ellipse at 8% 8%,rgba(207,186,240,.18),transparent 34%),radial-gradient(ellipse at 92% 26%,rgba(142,236,245,.13),transparent 33%),radial-gradient(ellipse at 52% 82%,rgba(241,192,232,.11),transparent 40%),linear-gradient(135deg,#29283b,#343149 55%,#29283b);background-attachment:fixed;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+body:before{content:"";position:fixed;inset:0;pointer-events:none;z-index:-1;opacity:.22;background-image:radial-gradient(rgba(255,255,255,.22) .7px,transparent .7px);background-size:22px 22px}a{color:inherit;text-decoration:none;transition:color .3s ease,background-color .35s ease,border-color .35s ease,box-shadow .35s ease,opacity .35s ease,transform .35s ease,filter .35s ease}button{font:inherit;transition:color .3s ease,background-color .35s ease,border-color .35s ease,box-shadow .35s ease,opacity .35s ease,transform .35s ease,filter .35s ease}img{display:block;max-width:100%}::selection{background:var(--mauve);color:#28263b}
 .scroll-progress{height:3px;position:fixed;top:0;left:0;z-index:100;background:linear-gradient(90deg,var(--rose),var(--mauve),var(--frost),var(--mint));width:0}
-.topbar{height:82px;position:sticky;top:0;z-index:50;background:rgba(42,40,60,.68);backdrop-filter:blur(24px) saturate(150%);-webkit-backdrop-filter:blur(24px) saturate(150%);border-bottom:1px solid var(--stroke)}.topbar-inner{height:100%;max-width:var(--max);padding:0 5vw;margin:auto;display:flex;align-items:center;justify-content:space-between}.brand,.footer-brand{display:flex;align-items:center;gap:12px;font:800 22px 'Space Grotesk',sans-serif;letter-spacing:-.06em}.brand img{width:38px;height:38px;object-fit:contain;filter:drop-shadow(0 5px 12px rgba(0,0,0,.2))}.nav{display:flex;align-items:center;gap:30px;font-size:12px;font-weight:700;color:#dedbed}.nav a{transition:color .2s,transform .2s}.nav a:hover{color:var(--aqua);transform:translateY(-1px)}.nav .nav-cta{color:#29283b;background:linear-gradient(110deg,var(--lemon),var(--petal));padding:13px 22px;border-radius:999px;box-shadow:0 8px 25px rgba(251,248,204,.15)}.menu-toggle{display:none;width:46px;height:46px;border:1px solid var(--stroke);border-radius:50%;background:var(--glass);backdrop-filter:blur(16px);color:var(--ink);cursor:pointer}
-.wrap{max-width:var(--max);margin:auto;padding-left:5vw;padding-right:5vw}.eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:10px;font-weight:800;letter-spacing:.17em;text-transform:uppercase;color:var(--mint)}.eyebrow:before{content:"";width:22px;height:2px;background:linear-gradient(90deg,var(--rose),var(--mauve));border-radius:4px}.hero{min-height:calc(100svh - 82px);display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:5vw;padding-top:65px;padding-bottom:90px;position:relative}.hero-copy{position:relative;z-index:2}.hero h1{font:700 clamp(58px,8vw,112px)/.91 'Space Grotesk',sans-serif;letter-spacing:-.085em;margin:24px 0 26px}.hero h1 span{background:linear-gradient(100deg,var(--rose),var(--mauve) 48%,var(--frost));background-clip:text;-webkit-background-clip:text;color:transparent}.hero-lead{max-width:530px;font-size:clamp(15px,1.45vw,19px);line-height:1.8;color:var(--muted)}.actions{display:flex;gap:14px;flex-wrap:wrap;margin-top:34px}.btn{min-height:50px;display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:0 25px;border:1px solid transparent;border-radius:999px;background:linear-gradient(110deg,var(--lemon),var(--petal));color:#302c42;font-size:12px;font-weight:800;cursor:pointer;box-shadow:0 10px 28px rgba(251,248,204,.13);transition:transform .22s,box-shadow .22s,filter .22s}.btn:hover{transform:translateY(-3px);box-shadow:0 15px 34px rgba(207,186,240,.24);filter:saturate(1.12)}.btn.secondary{background:rgba(255,255,255,.075);border-color:var(--stroke);color:var(--ink);box-shadow:inset 0 1px rgba(255,255,255,.12),0 10px 28px rgba(10,8,24,.12);backdrop-filter:blur(16px)}.btn.secondary:hover{background:rgba(255,255,255,.14);color:var(--aqua)}.hero-visual{min-height:520px;position:relative;display:grid;place-items:center}.device-stage{width:min(100%,560px);min-height:470px;position:relative;display:grid;place-items:center;border:1px solid rgba(255,255,255,.2);border-radius:38px;background:linear-gradient(145deg,rgba(255,255,255,.16),rgba(255,255,255,.045));backdrop-filter:blur(22px) saturate(140%);-webkit-backdrop-filter:blur(22px) saturate(140%);box-shadow:var(--shadow),inset 0 1px rgba(255,255,255,.2);overflow:hidden}.device-stage:before{content:"";position:absolute;width:390px;height:390px;border:1px solid rgba(255,255,255,.18);border-radius:50%;box-shadow:0 0 0 34px rgba(255,255,255,.035),0 0 0 70px rgba(255,255,255,.025)}.device-stage:after{content:"FLOCK3 / HARDWARE PLATFORM";position:absolute;right:26px;bottom:24px;color:rgba(255,255,255,.55);font-size:9px;letter-spacing:.16em;font-weight:800}.device-image{position:relative;z-index:2;width:clamp(180px,25vw,290px);max-height:430px;object-fit:contain;filter:drop-shadow(0 28px 26px rgba(0,0,0,.34));animation:deviceFloat 7s ease-in-out infinite}.stage-tag{position:absolute;left:7%;bottom:9%;z-index:4;padding:12px 17px;border:1px solid var(--stroke);border-radius:999px;background:rgba(255,255,255,.12);backdrop-filter:blur(16px);font-size:10px;letter-spacing:.12em;font-weight:800;color:var(--lemon)}.hero-scroll{position:absolute;bottom:28px;left:5vw;display:flex;align-items:center;gap:12px;color:var(--muted);font-size:9px;font-weight:800;letter-spacing:.16em}.scroll-mark{width:36px;height:1px;background:linear-gradient(90deg,var(--rose),var(--frost))}@keyframes deviceFloat{0%,100%{transform:translateY(0) rotate(-2deg)}50%{transform:translateY(-13px) rotate(1deg)}}
-.marquee{overflow:hidden;border-block:1px solid var(--stroke);background:rgba(255,255,255,.055);backdrop-filter:blur(18px);padding:17px 0}.marquee-track{display:flex;gap:34px;width:max-content;animation:marquee 30s linear infinite;color:var(--mint);font:700 11px 'Space Grotesk';letter-spacing:.16em}.marquee-track span{display:flex;align-items:center;gap:34px}.marquee-track i{width:6px;height:6px;background:var(--rose);border-radius:50%}@keyframes marquee{to{transform:translateX(-50%)}}
-.section{padding:118px 5vw}.section-head{max-width:var(--max);margin:0 auto 52px;display:flex;justify-content:space-between;align-items:end;gap:30px}.section-head h2{font:700 clamp(42px,6.5vw,82px)/.98 'Space Grotesk';letter-spacing:-.075em;margin:17px 0 0}.section-head p{max-width:410px;margin:0;color:var(--muted);font-size:14px;line-height:1.8}.foundation{background:linear-gradient(180deg,rgba(207,186,240,.055),transparent 75%)}.foundation-grid{max-width:var(--max);margin:auto;display:grid;grid-template-columns:1.05fr .95fr;gap:22px}.feature-panel{min-height:420px;padding:34px;border:1px solid var(--stroke);border-radius:var(--radius);background:linear-gradient(145deg,rgba(255,255,255,.14),rgba(255,255,255,.045));backdrop-filter:blur(22px) saturate(140%);box-shadow:var(--shadow),inset 0 1px rgba(255,255,255,.17);position:relative;overflow:hidden;transition:transform .35s,border-color .35s}.feature-panel:hover{transform:translateY(-5px);border-color:rgba(207,186,240,.55)}.feature-panel h3{font:700 clamp(30px,4vw,48px)/1 'Space Grotesk';letter-spacing:-.06em;margin:18px 0}.feature-panel p{max-width:420px;color:var(--muted);line-height:1.8;font-size:13px}.feature-panel .panel-foot{position:absolute;bottom:30px;left:34px;right:34px;display:flex;justify-content:space-between;align-items:center;color:var(--mint);font-size:10px;font-weight:800;letter-spacing:.13em}.feature-symbol{position:absolute;right:5%;top:16%;width:190px;height:190px;border-radius:50%;background:linear-gradient(145deg,rgba(241,192,232,.24),rgba(163,196,243,.08));border:1px solid rgba(255,255,255,.18);box-shadow:inset 0 1px rgba(255,255,255,.2),0 20px 50px rgba(10,8,24,.18);display:grid;place-items:center;color:var(--rose);font:700 56px 'Space Grotesk';opacity:.9}.feature-symbol:before,.feature-symbol:after{content:"";position:absolute;border:1px solid rgba(255,255,255,.2);border-radius:50%;inset:20px}.feature-symbol:after{inset:42px}.feature-panel.accent{background:linear-gradient(145deg,rgba(142,236,245,.14),rgba(207,186,240,.06))}.feature-panel.accent .feature-symbol{background:linear-gradient(145deg,rgba(142,236,245,.22),rgba(152,245,225,.08));color:var(--aqua)}.mini-label{display:inline-flex;padding:9px 14px;border:1px solid rgba(255,255,255,.15);border-radius:999px;background:rgba(255,255,255,.09);color:var(--lemon);font-size:9px;font-weight:800;letter-spacing:.15em;backdrop-filter:blur(12px)}
-.products{padding-top:30px}.product-list{max-width:var(--max);margin:auto;display:grid;gap:22px}.product-card{display:grid;grid-template-columns:1fr 1fr;min-height:440px;border:1px solid var(--stroke);border-radius:var(--radius);background:linear-gradient(145deg,rgba(255,255,255,.12),rgba(255,255,255,.04));backdrop-filter:blur(22px) saturate(140%);box-shadow:var(--shadow),inset 0 1px rgba(255,255,255,.16);overflow:hidden;transition:transform .35s,border-color .35s}.product-card:hover{transform:translateY(-4px);border-color:rgba(163,196,243,.5)}.product-card.reverse .product-art{order:2}.product-info{padding:clamp(28px,5vw,62px);display:flex;flex-direction:column;justify-content:center}.product-index{font-size:10px;color:var(--rose);font-weight:800;letter-spacing:.16em}.product-info h3{font:700 clamp(38px,5vw,64px)/.98 'Space Grotesk';letter-spacing:-.07em;margin:18px 0}.product-info p{max-width:460px;color:var(--muted);font-size:14px;line-height:1.85}.product-meta{display:flex;gap:9px;flex-wrap:wrap;margin:17px 0 28px}.tag{padding:9px 14px;border:1px solid rgba(255,255,255,.15);border-radius:999px;background:rgba(255,255,255,.075);font-size:9px;font-weight:800;letter-spacing:.1em;color:var(--aqua)}.product-art{min-height:380px;display:grid;place-items:center;position:relative;padding:28px;background:radial-gradient(circle at 50% 50%,rgba(207,186,240,.14),transparent 62%)}.product-art:before{content:"";position:absolute;width:290px;height:290px;border-radius:50%;background:radial-gradient(circle,rgba(255,255,255,.12),rgba(255,255,255,.015) 70%);border:1px solid rgba(255,255,255,.12)}.product-art img{position:relative;z-index:1;max-height:330px;width:auto;object-fit:contain;filter:drop-shadow(0 25px 22px rgba(0,0,0,.35));transition:transform .5s}.product-card:hover .product-art img{transform:translateY(-8px) rotate(-2deg)}.hub-visual{position:relative;z-index:1;width:min(90%,430px);aspect-ratio:1.48;border:1px solid rgba(255,255,255,.24);border-radius:24px;background:rgba(255,255,255,.12);padding:13px;box-shadow:0 25px 55px rgba(12,10,29,.3);backdrop-filter:blur(16px);transform:rotate(-3deg);transition:transform .5s}.product-card:hover .hub-visual{transform:rotate(0) translateY(-5px)}.hub-screen{height:100%;display:grid;grid-template-columns:48px 1fr;gap:12px;border-radius:15px;background:linear-gradient(135deg,#44435a,#34334a);padding:13px}.hub-side{display:flex;flex-direction:column;gap:10px;border-right:1px solid rgba(255,255,255,.12);padding-right:10px}.hub-side i{height:22px;border-radius:8px;background:linear-gradient(90deg,rgba(207,186,240,.65),rgba(163,196,243,.24))}.hub-content{display:grid;grid-template-columns:repeat(2,1fr);grid-template-rows:repeat(3,1fr);gap:9px}.hub-content i{border-radius:10px;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.12)}.hub-content i:first-child{grid-column:span 2;background:linear-gradient(90deg,rgba(241,192,232,.35),rgba(163,196,243,.22))}.status{display:inline-flex;align-self:flex-start;padding:10px 15px;border:1px solid rgba(152,245,225,.25);border-radius:999px;background:rgba(152,245,225,.1);color:var(--mint);font-size:9px;font-weight:800;letter-spacing:.13em}
-.how{background:linear-gradient(180deg,transparent,rgba(163,196,243,.055),transparent)}.steps{max-width:var(--max);margin:auto;display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.step{padding:30px;border:1px solid var(--stroke);border-radius:26px;background:rgba(255,255,255,.075);backdrop-filter:blur(18px);box-shadow:inset 0 1px rgba(255,255,255,.12);transition:transform .3s,background .3s}.step:hover{transform:translateY(-5px);background:rgba(255,255,255,.12)}.step-num{display:grid;place-items:center;width:44px;height:44px;border-radius:50%;background:linear-gradient(135deg,var(--mauve),var(--frost));color:#302c42;font:800 12px 'Space Grotesk'}.step h3{font:700 22px 'Space Grotesk';letter-spacing:-.04em;margin:24px 0 10px}.step p{color:var(--muted);font-size:13px;line-height:1.8;margin:0}.faq{max-width:var(--max);margin:auto;border:1px solid var(--stroke);border-radius:var(--radius);background:rgba(255,255,255,.07);backdrop-filter:blur(20px);overflow:hidden;box-shadow:var(--shadow)}.faq-item+.faq-item{border-top:1px solid var(--stroke)}.faq-button{width:100%;padding:23px 28px;display:flex;justify-content:space-between;align-items:center;background:none;border:0;color:var(--ink);font:700 16px 'Space Grotesk';text-align:left;cursor:pointer}.faq-button span:last-child{width:34px;height:34px;border-radius:50%;display:grid;place-items:center;background:rgba(255,255,255,.1);color:var(--aqua);font-size:21px;transition:transform .25s,background .25s}.faq-item.open .faq-button span:last-child{transform:rotate(45deg);background:rgba(207,186,240,.2)}.faq-answer{max-height:0;overflow:hidden;transition:max-height .3s ease}.faq-answer p{margin:0;padding:0 28px 24px;max-width:850px;color:var(--muted);font-size:14px;line-height:1.8}.footer{border-top:1px solid var(--stroke);background:rgba(28,27,43,.38);backdrop-filter:blur(18px);padding:38px 5vw}.footer-inner{max-width:var(--max);margin:auto;display:flex;align-items:center;justify-content:space-between;gap:25px}.footer-brand img{width:32px;height:32px;object-fit:contain}.footer-inner p{color:var(--muted);font-size:12px}.footer-links{display:flex;gap:22px;color:var(--muted);font-size:11px;font-weight:700}.footer-links a:hover{color:var(--aqua)}
-.reveal{opacity:0;transform:translateY(24px);transition:opacity .7s ease,transform .7s cubic-bezier(.2,.7,.2,1)}.reveal.visible{opacity:1;transform:translateY(0)}
-@media(max-width:900px){.hero{grid-template-columns:1fr;padding-top:75px}.hero-copy{max-width:720px}.hero-visual{min-height:410px}.device-stage{min-height:400px}.foundation-grid{grid-template-columns:1fr}.feature-panel{min-height:360px}.product-card{grid-template-columns:1fr}.product-card.reverse .product-art{order:0}.product-art{min-height:330px}.section-head{align-items:flex-start;flex-direction:column}.section-head p{max-width:620px}.steps{grid-template-columns:1fr}.nav{gap:18px}}
-@media(max-width:650px){.topbar{height:72px}.topbar-inner{padding:0 6vw}.menu-toggle{display:block}.nav{display:none;position:absolute;top:72px;left:4vw;right:4vw;padding:18px;border:1px solid var(--stroke);border-radius:24px;background:rgba(43,41,62,.94);backdrop-filter:blur(24px);box-shadow:var(--shadow);flex-direction:column;align-items:stretch;gap:0}.nav.open{display:flex}.nav a{padding:14px 12px}.nav .nav-cta{margin-top:10px;text-align:center}.hero{min-height:auto;padding-top:65px;padding-bottom:75px;gap:22px}.hero h1{font-size:clamp(55px,17vw,84px)}.hero-visual{min-height:350px}.device-stage{min-height:340px;border-radius:28px}.device-stage:before{width:250px;height:250px}.device-image{width:220px;max-height:300px}.hero-scroll{bottom:22px}.section{padding:78px 6vw}.section-head{margin-bottom:34px}.section-head h2{font-size:clamp(40px,13vw,64px)}.feature-panel{padding:25px;min-height:370px;border-radius:25px}.feature-symbol{width:135px;height:135px;font-size:40px;right:4%;top:13%}.feature-panel .panel-foot{left:25px;right:25px;bottom:25px}.product-card{border-radius:25px}.product-info{padding:28px 25px}.product-info h3{font-size:46px}.product-art{min-height:280px;padding:20px}.product-art:before{width:220px;height:220px}.product-art img{max-height:250px}.hub-visual{width:94%}.faq{border-radius:24px}.faq-button{padding:20px;font-size:14px}.faq-answer p{padding:0 20px 20px}.footer-inner{align-items:flex-start;flex-direction:column}.footer-links{flex-wrap:wrap}.marquee-track{font-size:10px}}
-@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.device-image,.marquee-track{animation:none}.reveal{opacity:1;transform:none;transition:none}*{transition-duration:.01ms!important}}
+.topbar{--header-height:82px;height:82px;position:sticky;top:0;z-index:50;background:rgba(42,40,60,.68);backdrop-filter:blur(24px) saturate(150%);-webkit-backdrop-filter:blur(24px) saturate(150%);border-bottom:1px solid var(--stroke)}.topbar-inner{height:100%;max-width:var(--max);padding:0 5vw;margin:auto;display:flex;align-items:center;justify-content:space-between}.brand,.footer-brand{display:flex;align-items:center;gap:12px;font:800 22px "Space Grotesk",sans-serif;letter-spacing:-.06em}.brand img{width:38px;height:38px;object-fit:contain;filter:drop-shadow(0 5px 12px rgba(0,0,0,.2))}.nav{display:flex;align-items:center;gap:30px;font-size:12px;font-weight:700;color:#dedbed}.nav a{transition:color .2s,transform .2s}.nav a:hover{color:var(--aqua);transform:translateY(-1px)}.nav .nav-cta{color:#29283b;background:linear-gradient(110deg,var(--lemon),var(--petal));padding:13px 22px;border-radius:999px;box-shadow:0 8px 25px rgba(251,248,204,.15)}.menu-toggle{display:none;width:46px;height:46px;border:1px solid var(--stroke);border-radius:50%;background:var(--glass);backdrop-filter:blur(16px);color:var(--ink);cursor:pointer}
+.wrap{max-width:var(--max);margin:auto;padding-left:5vw;padding-right:5vw}.eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:10px;font-weight:800;letter-spacing:.17em;text-transform:uppercase;color:var(--mint)}.eyebrow:before{content:"";width:22px;height:2px;background:linear-gradient(90deg,var(--rose),var(--mauve));border-radius:4px}.hero{min-height:calc(100svh - 82px);display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:5vw;padding-top:65px;padding-bottom:90px;position:relative}.hero-copy{position:relative;z-index:2}.hero h1{font:700 clamp(58px,8vw,112px)/.91 "Space Grotesk",sans-serif;letter-spacing:-.085em;margin:24px 0 26px}.hero h1 span{background:linear-gradient(100deg,var(--rose),var(--mauve) 48%,var(--frost));background-clip:text;-webkit-background-clip:text;color:transparent}.hero-lead{max-width:530px;font-size:clamp(15px,1.45vw,19px);line-height:1.8;color:var(--muted)}.actions{display:flex;gap:14px;flex-wrap:wrap;margin-top:34px}.btn{min-height:50px;display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:0 25px;border:1px solid transparent;border-radius:999px;background:linear-gradient(110deg,var(--lemon),var(--petal));color:#302c42;font-size:12px;font-weight:800;cursor:pointer;box-shadow:0 10px 28px rgba(251,248,204,.13);transition:transform .22s,box-shadow .22s,filter .22s}.btn:hover{transform:translateY(-3px);box-shadow:0 15px 34px rgba(207,186,240,.24);filter:saturate(1.12)}.btn.secondary{background:rgba(255,255,255,.075);border-color:var(--stroke);color:var(--ink);box-shadow:inset 0 1px rgba(255,255,255,.12),0 10px 28px rgba(10,8,24,.12);backdrop-filter:blur(16px)}.btn.secondary:hover{background:rgba(255,255,255,.14);color:var(--aqua)}.hero-visual{min-height:520px;position:relative;display:grid;place-items:center}.device-stage{width:min(100%,560px);min-height:470px;position:relative;display:grid;place-items:center;border:1px solid rgba(255,255,255,.2);border-radius:38px;background:linear-gradient(145deg,rgba(255,255,255,.16),rgba(255,255,255,.045));backdrop-filter:blur(22px) saturate(140%);-webkit-backdrop-filter:blur(22px) saturate(140%);box-shadow:var(--shadow),inset 0 1px rgba(255,255,255,.2);overflow:hidden;transition:background .8s,border-color .8s,box-shadow .8s,transform .8s}.device-stage:before{content:"";position:absolute;width:390px;height:390px;border:1px solid rgba(255,255,255,.18);border-radius:50%;box-shadow:0 0 0 34px rgba(255,255,255,.035),0 0 0 70px rgba(255,255,255,.025)}.device-image{position:relative;z-index:2;width:clamp(180px,25vw,290px);max-height:430px;object-fit:contain;filter:drop-shadow(0 28px 26px rgba(0,0,0,.34));animation:deviceFloat 7s ease-in-out infinite}.hero-scroll{position:absolute;bottom:28px;left:5vw;display:flex;align-items:center;gap:12px;color:var(--muted);font-size:9px;font-weight:800;letter-spacing:.16em}.scroll-mark{width:36px;height:1px;background:linear-gradient(90deg,var(--rose),var(--frost))}@keyframes deviceFloat{0%,100%{transform:translateY(0) rotate(-2deg)}50%{transform:translateY(-13px) rotate(1deg)}}
+.marquee{overflow:hidden;border-block:1px solid var(--stroke);background:rgba(255,255,255,.055);backdrop-filter:blur(18px);padding:17px 0}.marquee-track{display:flex;gap:34px;width:max-content;animation:marquee 30s linear infinite;color:var(--mint);font:700 11px "Space Grotesk";letter-spacing:.16em}.marquee-track span{display:flex;align-items:center;gap:34px}.marquee-track i{width:6px;height:6px;background:var(--rose);border-radius:50%}@keyframes marquee{to{transform:translateX(-50%)}}
+.section{padding:118px 5vw}.section-head{max-width:var(--max);margin:0 auto 52px;display:flex;justify-content:space-between;align-items:end;gap:30px}.section-head h2{font:700 clamp(42px,6.5vw,82px)/.98 "Space Grotesk";letter-spacing:-.075em;margin:17px 0 0}.section-head p{max-width:410px;margin:0;color:var(--muted);font-size:14px;line-height:1.8}.foundation{background:linear-gradient(180deg,rgba(207,186,240,.055),transparent 75%)}.foundation-grid{max-width:var(--max);margin:auto;display:grid;grid-template-columns:1.05fr .95fr;gap:22px}.feature-panel{min-height:420px;padding:34px;border:1px solid var(--stroke);border-radius:var(--radius);background:linear-gradient(145deg,rgba(255,255,255,.14),rgba(255,255,255,.045));backdrop-filter:blur(22px) saturate(140%);box-shadow:var(--shadow),inset 0 1px rgba(255,255,255,.17);position:relative;overflow:hidden;transition:transform .35s,border-color .35s}.feature-panel:hover{transform:translateY(-5px);border-color:rgba(207,186,240,.55)}.feature-panel h3{font:700 clamp(30px,4vw,48px)/1 "Space Grotesk";letter-spacing:-.06em;margin:18px 0}.feature-panel p{max-width:420px;color:var(--muted);line-height:1.8;font-size:13px}.feature-panel .panel-foot{position:absolute;bottom:30px;left:34px;right:34px;display:flex;justify-content:space-between;align-items:center;color:var(--mint);font-size:10px;font-weight:800;letter-spacing:.13em}.feature-symbol{position:absolute;right:5%;top:16%;width:190px;height:190px;border-radius:50%;background:linear-gradient(145deg,rgba(241,192,232,.24),rgba(163,196,243,.08));border:1px solid rgba(255,255,255,.18);box-shadow:inset 0 1px rgba(255,255,255,.2),0 20px 50px rgba(10,8,24,.18);display:grid;place-items:center;color:var(--rose);font:700 56px "Space Grotesk";opacity:.9}.feature-symbol:before,.feature-symbol:after{content:"";position:absolute;border:1px solid rgba(255,255,255,.2);border-radius:50%;inset:20px}.feature-symbol:after{inset:42px}.feature-panel.accent{background:linear-gradient(145deg,rgba(142,236,245,.14),rgba(207,186,240,.06))}.feature-panel.accent .feature-symbol{background:linear-gradient(145deg,rgba(142,236,245,.22),rgba(152,245,225,.08));color:var(--aqua)}.mini-label{display:inline-flex;padding:9px 14px;border:1px solid rgba(255,255,255,.15);border-radius:999px;background:rgba(255,255,255,.09);color:var(--lemon);font-size:9px;font-weight:800;letter-spacing:.15em;backdrop-filter:blur(12px)}
+.products{padding-top:30px}.product-list{max-width:var(--max);margin:auto;display:grid;gap:22px}.product-card{display:grid;grid-template-columns:1fr 1fr;min-height:440px;border:1px solid var(--stroke);border-radius:var(--radius);background:linear-gradient(145deg,rgba(255,255,255,.12),rgba(255,255,255,.04));backdrop-filter:blur(22px) saturate(140%);box-shadow:var(--shadow),inset 0 1px rgba(255,255,255,.16);overflow:hidden;transition:transform .35s,border-color .35s}.product-card:hover{transform:translateY(-4px);border-color:rgba(163,196,243,.5)}.product-card.reverse .product-art{order:2}.product-info{padding:clamp(28px,5vw,62px);display:flex;flex-direction:column;justify-content:center}.product-index{font-size:10px;color:var(--rose);font-weight:800;letter-spacing:.16em}.product-info h3{font:700 clamp(38px,5vw,64px)/.98 "Space Grotesk";letter-spacing:-.07em;margin:18px 0}.product-info p{max-width:460px;color:var(--muted);font-size:14px;line-height:1.85}.product-meta{display:flex;gap:9px;flex-wrap:wrap;margin:17px 0 28px}.tag{padding:9px 14px;border:1px solid rgba(255,255,255,.15);border-radius:999px;background:rgba(255,255,255,.075);font-size:9px;font-weight:800;letter-spacing:.1em;color:var(--aqua)}.product-art{min-height:380px;display:grid;place-items:center;position:relative;padding:28px;background:radial-gradient(circle at 50% 50%,rgba(207,186,240,.14),transparent 62%)}.product-art:before{content:"";position:absolute;width:290px;height:290px;border-radius:50%;background:radial-gradient(circle,rgba(255,255,255,.12),rgba(255,255,255,.015) 70%);border:1px solid rgba(255,255,255,.12)}.product-art img{position:relative;z-index:1;max-height:330px;width:auto;object-fit:contain;filter:drop-shadow(0 25px 22px rgba(0,0,0,.35));transition:transform .5s}.product-card:hover .product-art img{transform:translateY(-8px) rotate(-2deg)}.status{display:inline-flex;align-self:flex-start;padding:10px 15px;border:1px solid rgba(152,245,225,.25);border-radius:999px;background:rgba(152,245,225,.1);color:var(--mint);font-size:9px;font-weight:800;letter-spacing:.13em}
+.faq{max-width:var(--max);margin:auto;border:1px solid var(--stroke);border-radius:var(--radius);background:rgba(255,255,255,.07);backdrop-filter:blur(20px);overflow:hidden;box-shadow:var(--shadow)}.faq-item+.faq-item{border-top:1px solid var(--stroke)}.faq-button{width:100%;padding:23px 28px;display:flex;justify-content:space-between;align-items:center;background:none;border:0;color:var(--ink);font:700 16px "Space Grotesk";text-align:left;cursor:pointer}.faq-button span:last-child{width:34px;height:34px;border-radius:50%;display:grid;place-items:center;background:rgba(255,255,255,.1);color:var(--aqua);font-size:21px;transition:transform .25s,background .25s}.faq-item.open .faq-button span:last-child{transform:rotate(45deg);background:rgba(207,186,240,.2)}.faq-answer{max-height:0;overflow:hidden;transition:max-height .65s cubic-bezier(.2,.75,.25,1)}.faq-answer p{margin:0;padding:0 28px 24px;max-width:850px;color:var(--muted);font-size:14px;line-height:1.8}.footer{width:min(1000px,90vw);margin:34px auto 28px;padding:18px 26px;border:1px solid var(--stroke);border-radius:26px;background:rgba(28,27,43,.48);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);box-shadow:0 18px 48px rgba(12,10,29,.16)}.footer-inner{max-width:100%;margin:auto;display:flex;align-items:center;justify-content:space-between;gap:20px}.footer-brand img{width:30px;height:30px;object-fit:contain}.github-link{display:inline-flex;align-items:center;gap:9px;padding:10px 16px;border:1px solid var(--stroke);border-radius:999px;background:rgba(255,255,255,.07);color:var(--muted);font-size:11px;font-weight:800;letter-spacing:.04em}.github-link:hover{color:var(--aqua);background:rgba(255,255,255,.13);border-color:rgba(142,236,245,.38);transform:translateY(-2px)}
+.reveal{opacity:0;filter:blur(3px);transform:translate3d(0,42px,0) scale(.985);transition:opacity .95s ease,transform .95s cubic-bezier(.18,.72,.22,1),filter .95s ease;will-change:opacity,transform,filter}.reveal.visible{opacity:1;filter:blur(0);transform:translate3d(0,0,0) scale(1)}
+.hero-copy.reveal{transition-delay:.04s}.hero-visual.reveal{transition-delay:.16s}
+.section-head.reveal{transition-delay:.04s}.product-card.reveal:nth-child(2){transition-delay:.12s}
+
+.faq.reveal,.footer.reveal{transition-delay:.08s}
+@media(max-width:900px){.hero{grid-template-columns:1fr;padding-top:75px}.hero-copy{max-width:720px}.hero-visual{min-height:410px}.device-stage{min-height:400px}.foundation-grid{grid-template-columns:1fr}.feature-panel{min-height:360px}.product-card{grid-template-columns:1fr}.product-card.reverse .product-art{order:0}.product-art{min-height:330px}.section-head{align-items:flex-start;flex-direction:column}.section-head p{max-width:620px}.nav{gap:18px}}
+@media(max-width:650px){.topbar{--header-height:72px;height:72px}.topbar-inner{padding:0 6vw}.menu-toggle{display:block}.nav{display:none;position:absolute;top:72px;left:4vw;right:4vw;padding:18px;border:1px solid var(--stroke);border-radius:24px;background:rgba(43,41,62,.94);backdrop-filter:blur(24px);box-shadow:var(--shadow);flex-direction:column;align-items:stretch;gap:0}.nav.open{display:flex}.nav a{padding:14px 12px}.nav .nav-cta{margin-top:10px;text-align:center}.hero{min-height:auto;padding-top:65px;padding-bottom:75px;gap:22px}.hero h1{font-size:clamp(55px,17vw,84px)}.hero-visual{min-height:350px}.device-stage{min-height:340px;border-radius:28px}.device-stage:before{width:250px;height:250px}.device-image{width:220px;max-height:300px}.hero-scroll{bottom:22px}.section{padding:78px 6vw}.section-head{margin-bottom:34px}.section-head h2{font-size:clamp(40px,13vw,64px)}.feature-panel{padding:25px;min-height:370px;border-radius:25px}.feature-symbol{width:135px;height:135px;font-size:40px;right:4%;top:13%}.feature-panel .panel-foot{left:25px;right:25px;bottom:25px}.product-card{border-radius:25px}.product-info{padding:28px 25px}.product-info h3{font-size:46px}.product-art{min-height:280px;padding:20px}.product-art:before{width:220px;height:220px}.product-art img{max-height:250px}.faq{border-radius:24px}.faq-button{padding:20px;font-size:14px}.faq-answer p{padding:0 20px 20px}.footer{width:calc(100% - 12vw);padding:16px 20px;margin:26px auto 20px}.footer-inner{align-items:center;flex-direction:row}.marquee-track{font-size:10px}}
+/* Single-page anchor navigation */
+#home,#products,#faq{scroll-margin-top:calc(var(--header-height, 82px) + 12px)}
+.nav a[aria-current="location"]{color:var(--lemon)}
+.nav a[aria-current="location"]:after{content:"";display:block;height:2px;margin-top:5px;border-radius:2px;background:linear-gradient(90deg,var(--rose),var(--frost))}
+
+.device-illustration{
+  --device-w:clamp(190px,16vw,228px);
+  position:relative;display:block;flex:0 0 auto;width:var(--device-w);height:auto;min-height:0;aspect-ratio:279 / 520;
+  align-self:center;isolation:isolate;border:1px solid rgba(113,120,126,.72);border-radius:25px;
+  background:linear-gradient(110deg,#92999f 0%,#aeb4b9 5%,#aeb4b9 95%,#92999f 100%);
+  box-shadow:0 30px 58px rgba(0,0,0,.34),inset 0 1px 1px rgba(255,255,255,.78),inset 0 -2px 5px rgba(50,55,65,.16);
+  transform:perspective(1100px) rotateY(-4deg) rotateZ(-.6deg);
+  transition:transform 1.05s cubic-bezier(.2,.75,.25,1),filter 1.05s,box-shadow 1.05s,background-color 1.05s,border-color 1.05s;
+}
+.device-illustration:before{
+  content:"";position:absolute;z-index:-1;inset:3px -2px 3px 2px;border-radius:24px;
+  background:linear-gradient(90deg,#777e84 0%,#898f95 45%,#777e84 100%);border:1px solid rgba(78,84,90,.62);
+  box-shadow:0 10px 22px rgba(0,0,0,.18);transform:translateZ(-3px);
+}
+.device-face{position:absolute;inset:2.2% 2.6% 2.2%;border-radius:21px;background:linear-gradient(145deg,#fff 0%,#fafbfa 58%,#f0f2f1 100%);border:1px solid rgba(255,255,255,.98);box-shadow:inset 0 0 0 1px rgba(86,96,103,.1),0 1px 3px rgba(255,255,255,.8);}
+.device-screen{position:absolute;left:6.5%;right:6.5%;top:10.5%;bottom:10.5%;border:1px solid rgba(93,101,99,.16);background:linear-gradient(145deg,#d1d5d0,#c4c9c4);box-shadow:inset 0 2px 9px rgba(50,58,55,.09),0 1px 0 rgba(255,255,255,.7);overflow:hidden;}
+.device-screen:before{content:"";position:absolute;inset:0;background:repeating-linear-gradient(0deg,rgba(65,73,68,.025) 0 1px,transparent 1px 3px);opacity:.55}
+.device-touch{position:absolute;left:50%;bottom:3.2%;width:24px;height:24px;transform:translateX(-50%);border:3px solid #fff;border-radius:50%;background:rgba(255,255,255,.12);box-shadow:0 0 0 1px rgba(255,255,255,.55),0 0 8px rgba(255,255,255,.82),0 0 18px rgba(255,255,255,.34);}
+.device-button{position:absolute;top:39%;width:4px;height:8%;border-radius:3px;background:linear-gradient(90deg,#747b81,#c4c9cd,#858d94);box-shadow:0 1px 2px rgba(0,0,0,.25)}
+.device-button.left{left:-3px}.device-button.right{right:-3px;top:47%;height:6%}
+.hero .device-illustration{width:clamp(190px,16vw,228px);aspect-ratio:279 / 520;animation:deviceFloat 8s ease-in-out infinite}
+.product-art .device-illustration{width:clamp(166px,15vw,190px);max-width:82%;}
+@keyframes deviceFloat{0%,100%{transform:perspective(1100px) translateY(0) rotateY(-5deg) rotateZ(-1deg)}50%{transform:perspective(1100px) translateY(-10px) rotateY(-1deg) rotateZ(.5deg)}}
+@media(max-width:900px){.hero .device-illustration{width:clamp(190px,27vw,224px);aspect-ratio:279 / 520}}
+@media(max-width:650px){.hero .device-illustration{width:184px;aspect-ratio:279 / 520}.product-art .device-illustration{width:168px;aspect-ratio:279 / 520}}
+
+/* Consistent, unhurried motion across the interface. */
+*,*::before,*::after{transition-property:color,background-color,border-color,box-shadow,filter,opacity,transform;transition-duration:.55s;transition-timing-function:cubic-bezier(.2,.75,.25,1)}
+a,button,.feature-panel,.product-card,.faq,.faq-button,.tag,.status,.mini-label,.device-stage,.device-illustration,.device-illustration:before,.device-face,.device-screen,.device-touch,.device-button{transition-timing-function:cubic-bezier(.2,.75,.25,1)}
+.nav a,.nav-cta,.btn,.menu-toggle,.feature-panel,.product-card,.faq-button,.faq-button span:last-child,.tag,.status,.mini-label{transition-duration:.45s}
+
+/* Device presentation: true front-facing proportions and a consistent finish. */
+.device-illustration{
+  width:220px !important;
+  height:395px !important;
+  min-width:0;
+  min-height:0;
+  aspect-ratio:279 / 520;
+  flex:none;
+  align-self:center;
+  transform:none !important;
+  animation:deviceFloatFront 8s ease-in-out infinite !important;
+  border:1px solid rgba(105,112,118,.72);
+  border-radius:24px;
+  background:linear-gradient(90deg,#969da3 0%,#aeb4b9 8%,#aeb4b9 92%,#969da3 100%);
+  box-shadow:0 30px 58px rgba(0,0,0,.32),inset 0 1px 1px rgba(255,255,255,.82),inset 0 -2px 5px rgba(50,55,65,.13);
+  transition:transform .9s cubic-bezier(.2,.75,.25,1),filter .9s,box-shadow .9s,background .9s,border-color .9s;
+}
+.device-illustration:before{
+  inset:4px 0 4px 0;
+  border-radius:22px;
+  background:linear-gradient(90deg,#858c92 0%,#969da3 18%,#969da3 82%,#858c92 100%);
+  border:1px solid rgba(76,83,89,.58);
+  box-shadow:0 5px 12px rgba(0,0,0,.16);
+  transform:translateZ(-1px);
+}
+.device-face{
+  inset:2.1% 2.4% 2.1%;
+  border-radius:20px;
+  background:linear-gradient(145deg,#fff 0%,#fbfcfb 65%,#f5f7f6 100%);
+  border:1px solid rgba(255,255,255,.98);
+  box-shadow:inset 0 0 0 1px rgba(86,96,103,.08),0 1px 3px rgba(255,255,255,.8);
+}
+/* Keep the existing e-paper screen geometry; only unify its surrounding finish. */
+.device-touch{
+  width:25px;height:25px;
+  border:3px solid #fff;
+  background:rgba(255,255,255,.08);
+  box-shadow:0 0 0 1px rgba(255,255,255,.72),0 0 9px rgba(255,255,255,.9),0 0 19px rgba(255,255,255,.42);
+}
+.device-button{transition:background .65s,box-shadow .65s,opacity .65s}
+.hero .device-illustration{width:220px !important;height:430px !important;aspect-ratio:auto;}
+.product-art .device-illustration{width:220px !important;height:410px !important;max-width:82%;transform:scale(.82);transform-origin:center;}
+@keyframes deviceFloatFront{0%,100%{transform:translateY(0)}50%{transform:translateY(-9px)}}
+@media(max-width:900px){.hero .device-illustration{width:216px !important;height:422px !important;aspect-ratio:auto}}
+@media(max-width:650px){.hero .device-illustration{width:184px !important;height:360px !important;aspect-ratio:auto}.product-art .device-illustration{width:184px !important;height:343px !important;transform:scale(.88)}}
+.firmware-visual{width:min(78%,340px);aspect-ratio:1;position:relative;display:grid;place-items:center;border-radius:34px;border:1px solid rgba(255,255,255,.2);background:linear-gradient(145deg,rgba(142,236,245,.18),rgba(207,186,240,.1) 55%,rgba(255,255,255,.045));box-shadow:inset 0 1px rgba(255,255,255,.22),0 24px 60px rgba(12,10,29,.22);backdrop-filter:blur(18px)}
+.firmware-visual:before,.firmware-visual:after{content:"";position:absolute;inset:12%;border:1px solid rgba(255,255,255,.18);border-radius:26px;transform:rotate(45deg)}
+.firmware-visual:after{inset:23%;border-color:rgba(152,245,225,.35);transform:rotate(0deg)}
+.firmware-visual span{font:800 clamp(62px,8vw,100px)/1 "Space Grotesk";letter-spacing:-.1em;background:linear-gradient(120deg,var(--aqua),var(--mauve),var(--rose));background-clip:text;-webkit-background-clip:text;color:transparent;z-index:1}
+.firmware-visual b{position:absolute;z-index:2;right:25%;top:25%;font:700 35px "Space Grotesk";color:var(--lemon)}
+.firmware-visual i{position:absolute;width:7px;height:7px;border-radius:50%;background:var(--mint);box-shadow:0 0 16px var(--mint)}
+.firmware-visual i:nth-of-type(1){left:17%;top:50%}.firmware-visual i:nth-of-type(2){right:17%;top:50%;background:var(--rose);box-shadow:0 0 16px var(--rose)}.firmware-visual i:nth-of-type(3){left:50%;bottom:17%;background:var(--frost);box-shadow:0 0 16px var(--frost)}
+
+/* Final hardware detailing: uniform chassis margins and mirrored side controls. */
+.device-illustration{
+  border-radius:24px;
+  background:linear-gradient(90deg,#969da3 0%,#aeb4b9 8%,#aeb4b9 92%,#969da3 100%);
+  overflow:visible;
+}
+.device-illustration:before{
+  inset:0;
+  border-radius:24px;
+  background:linear-gradient(90deg,#858c92 0%,#969da3 18%,#969da3 82%,#858c92 100%);
+  transform:translateY(2px);
+}
+.device-face{
+  inset:5px;
+  border-radius:18px;
+}
+.device-touch{
+  bottom:3%;
+  width:27px;
+  height:27px;
+}
+.device-button{
+  position:absolute;
+  z-index:4;
+  top:auto;
+  width:4px;
+  height:22px;
+  border-radius:4px;
+  background:linear-gradient(90deg,#727a80 0%,#d0d4d7 48%,#858d93 100%);
+  box-shadow:0 1px 3px rgba(0,0,0,.28),inset 0 0 1px rgba(255,255,255,.75);
+}
+.device-button.upper{top:56%;}
+.device-button.lower{top:68%;}
+.device-button.side-left{left:-3px;}
+.device-button.side-right{right:-3px;}
+.device-illustration .device-face{box-sizing:border-box;}
+@media(max-width:650px){
+  .device-button{width:4px;height:19px;}
+  .device-button.upper{top:56%;}
+  .device-button.lower{top:68%;}
+  .device-touch{bottom:3%;width:24px;height:24px;}
+}
+
+
+/* Taller Home device silhouette and scroll-reveal staging. */
+@media(min-width:901px){.hero .device-stage{min-height:490px}}
+@media(max-width:900px){.hero .device-illustration{height:422px !important}.hero .device-stage{min-height:450px}.hero .hero-visual{min-height:455px}}
+@media(max-width:650px){.hero .device-illustration{height:360px !important}.hero .device-stage{min-height:390px}.hero .hero-visual{min-height:400px}}
+.section-head.reveal>div,.section-head.reveal>p,
+.product-card.reveal>.product-info,.product-card.reveal>.product-art,
+.faq.reveal .faq-item{
+  opacity:0;filter:blur(2px);transform:translate3d(0,20px,0);
+  transition:opacity .85s ease,transform .9s cubic-bezier(.18,.72,.22,1),filter .85s ease;
+}
+.section-head.reveal.visible>div,.section-head.reveal.visible>p,
+.product-card.reveal.visible>.product-info,.product-card.reveal.visible>.product-art,
+.faq.reveal.visible .faq-item{
+  opacity:1;filter:blur(0);transform:translate3d(0,0,0);
+}
+.section-head.reveal.visible>p,.product-card.reveal.visible>.product-art,.faq.reveal.visible .faq-item:nth-child(2){transition-delay:.12s}
+.faq.reveal.visible .faq-item:nth-child(3){transition-delay:.22s}
+.faq.reveal.visible .faq-item:nth-child(4){transition-delay:.32s}
+.footer.reveal .footer-inner>*{opacity:0;transform:translateY(12px);transition:opacity .8s ease,transform .8s cubic-bezier(.18,.72,.22,1)}
+.footer.reveal.visible .footer-inner>*{opacity:1;transform:translateY(0)}
+.footer.reveal.visible .footer-inner>*:nth-child(2){transition-delay:.12s}
+
+/* Consistent motion: keep the actual property transitions intact (including FAQ height). */
+html{scroll-behavior:auto}
+.nav a,.brand,.footer-brand,.github-link,.btn,.menu-toggle,.faq-button,.showcase-arrow,.showcase-dot,.tag,.status,.feature-panel,.product-card,.device-stage,.device-illustration,.device-touch,.device-button{
+  transition-timing-function:cubic-bezier(.2,.75,.25,1);
+}
+.product-card.reveal.visible:hover{transform:translateY(-4px);border-color:rgba(163,196,243,.5)}
+.btn:active,.showcase-arrow:active{transform:translateY(0) scale(.97)}
+
+/* Home carousel: a restrained 3D page-turn between the device and the Windows app. */
+.hero-showcase{perspective:1450px;isolation:isolate;min-height:490px}
+.hero-showcase:before{z-index:0;pointer-events:none}
+.showcase-slides{position:absolute;inset:0;z-index:1;overflow:hidden}
+.showcase-slide{
+  position:absolute;inset:0 0 48px;display:grid;place-items:center;padding:8px 20px 0;
+  opacity:0;visibility:hidden;pointer-events:none;
+  transform:perspective(1300px) translateX(6%) rotateY(-24deg) scale(.955);
+  transform-origin:left center;
+  transition:opacity .78s cubic-bezier(.2,.75,.25,1),transform .95s cubic-bezier(.18,.72,.22,1),visibility 0s linear .95s;
+  backface-visibility:hidden;
+}
+.showcase-slide.is-active{
+  opacity:1;visibility:visible;pointer-events:auto;
+  transform:perspective(1300px) translateX(0) rotateY(0) scale(1);
+  transition:opacity .78s cubic-bezier(.2,.75,.25,1),transform .95s cubic-bezier(.18,.72,.22,1),visibility 0s;
+}
+.showcase-slide.is-leaving{
+  opacity:0;visibility:hidden;pointer-events:none;
+  transform:perspective(1300px) translateX(-6%) rotateY(24deg) scale(.955);
+  transform-origin:right center;
+}
+.showcase-slide.from-left{transform:perspective(1300px) translateX(-6%) rotateY(24deg) scale(.955);transform-origin:right center}
+.showcase-slide.is-leaving.leaves-right{transform:perspective(1300px) translateX(6%) rotateY(-24deg) scale(.955);transform-origin:left center}
+.showcase-device{z-index:1}
+.showcase-controls{
+  position:absolute;z-index:5;left:50%;bottom:12px;transform:translateX(-50%);
+  display:flex;align-items:center;justify-content:center;gap:13px;width:max-content;max-width:calc(100% - 28px);
+}
+.showcase-arrow{
+  width:34px;height:34px;flex:0 0 34px;display:grid;place-items:center;padding:0;
+  border:1px solid rgba(255,255,255,.2);border-radius:50%;background:rgba(255,255,255,.09);
+  color:var(--ink);font:400 24px/1 "Manrope",sans-serif;cursor:pointer;
+  backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);
+}
+.showcase-arrow:hover{background:rgba(255,255,255,.2);border-color:rgba(142,236,245,.55);color:var(--aqua);transform:scale(1.08)}
+.showcase-control-center{display:flex;flex-direction:column;align-items:center;gap:7px;min-width:170px}
+.showcase-label{font-size:8px;line-height:1.2;font-weight:800;letter-spacing:.14em;color:var(--muted);white-space:nowrap}
+.showcase-dots{display:flex;align-items:center;justify-content:center;gap:7px}
+.showcase-dot{width:7px;height:7px;padding:0;border:0;border-radius:99px;background:rgba(255,255,255,.34);cursor:pointer}
+.showcase-dot:hover{background:rgba(255,255,255,.72);transform:scale(1.25)}
+.showcase-dot.is-active{width:23px;background:linear-gradient(90deg,var(--rose),var(--frost))}
+.hero-showcase:hover{border-color:rgba(207,186,240,.4);box-shadow:0 26px 72px rgba(12,10,29,.34),inset 0 1px rgba(255,255,255,.24)}
+
+/* Windows application mock-up used by the second Home slide. */
+
+@keyframes hubFloat{0%,100%{transform:translateY(0) rotate(-1deg)}50%{transform:translateY(-8px) rotate(.6deg)}}
+
+
+
+.hub-window-actions{margin-left:auto;display:flex;align-items:center;gap:7px}
+.hub-window-actions i{width:7px;height:7px;border-radius:50%;background:rgba(255,255,255,.35)}
+.hub-window-actions i:last-child{background:rgba(255,207,210,.8)}
+.hero-hub-screen{height:calc(100% - 66px);min-height:0;grid-template-columns:46px 1fr;gap:13px;padding:13px;background:linear-gradient(135deg,#45445b,#302f45);border-radius:0}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media(max-width:900px){.hero-showcase{min-height:490px}.showcase-slide{padding-left:12px;padding-right:12px}}
+@media(max-width:650px){
+  .hero-showcase{min-height:420px;border-radius:28px}
+  .showcase-slide{inset:0 0 46px;padding:6px 8px 0}
+  .hero .device-illustration{width:184px!important;height:360px!important}
+  .showcase-controls{bottom:9px;gap:9px}
+  .showcase-arrow{width:31px;height:31px;flex-basis:31px}
+  .showcase-control-center{min-width:152px;gap:6px}
+  .showcase-label{font-size:7px}
+  
+  
+  .hero-hub-screen{height:calc(100% - 56px);grid-template-columns:34px 1fr;gap:9px;padding:9px}
+  
+  
+  
+  
+  
+  
+  
+  
+  
+}
+@media(max-width:380px){.hero-showcase{min-height:400px}.showcase-control-center{min-width:140px}}
+
+
+/* Shared Flock3 Hub mock-up: a plain black Windows app window, cover grid and bottom island dock. */
+.hub-app-window{
+  position:relative;z-index:2;width:min(94%,490px);aspect-ratio:1.42;min-width:0;overflow:hidden;
+  border:1px solid rgba(255,255,255,.24);border-radius:13px;background:#050607;color:#f5f5f5;
+  box-shadow:0 26px 62px rgba(0,0,0,.48),0 0 0 1px rgba(0,0,0,.45);
+  display:flex;flex-direction:column;transform:translateZ(0);
+  transition:transform .48s cubic-bezier(.2,.75,.25,1),box-shadow .48s cubic-bezier(.2,.75,.25,1),border-color .35s ease;
+}
+.hub-app-window:hover{transform:translateY(-5px);box-shadow:0 32px 72px rgba(0,0,0,.52);border-color:rgba(255,255,255,.35)}
+.hub-app-titlebar{height:31px;flex:0 0 31px;display:flex;align-items:center;gap:8px;padding:0 0 0 11px;background:#090a0c;border-bottom:1px solid #202124;color:#e8e8e8;font:500 9px "Segoe UI",Arial,sans-serif;letter-spacing:0}
+.hub-app-title-icon{width:16px;height:16px;display:grid;place-items:center;border-radius:4px;background:#17191d;color:#f0f0f0;font:600 13px Georgia,serif}
+.hub-app-titlebar strong{font:500 10px "Segoe UI",Arial,sans-serif}
+.hub-window-controls{height:100%;margin-left:auto;display:flex;align-items:stretch}
+.hub-window-controls i{width:39px;display:grid;place-items:center;position:relative;color:#e5e5e5;font:400 12px "Segoe UI",Arial,sans-serif}
+.hub-window-controls .win-minimize:before{content:"";width:9px;height:1px;background:#bcbcbc}
+.hub-window-controls .win-maximize:before{content:"";width:8px;height:8px;border:1px solid #bcbcbc}
+.hub-window-controls .win-close{font-size:16px;font-weight:300}
+.hub-library{position:relative;flex:1;min-height:0;padding:14px 15px 54px;background:#050607;overflow:hidden}
+.hub-cover-grid{height:100%;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));grid-template-rows:repeat(3,minmax(0,1fr));gap:9px;align-content:center}
+.hub-cover{position:relative;display:block;min-width:0;min-height:0;overflow:hidden;aspect-ratio:1;border:1px solid rgba(255,255,255,.09);border-radius:3px;background:#191a1d;box-shadow:0 3px 9px rgba(0,0,0,.26)}
+.hub-cover:before,.hub-cover:after{content:"";position:absolute;pointer-events:none}
+.hub-cover:before{inset:12% 16%;border-radius:50%;border:1px solid rgba(255,255,255,.32);box-shadow:0 0 0 7px rgba(255,255,255,.055),0 0 0 15px rgba(255,255,255,.04)}
+.hub-cover:after{width:35%;height:35%;left:33%;top:33%;border-radius:50%;background:rgba(0,0,0,.25);box-shadow:inset 0 0 0 1px rgba(255,255,255,.27)}
+.cover-01{background:radial-gradient(circle at 50% 50%,#d9b5a6 0 9%,transparent 10%),linear-gradient(135deg,#5c2f36,#d28c73 52%,#251f29)}
+.cover-02{background:linear-gradient(145deg,#d9c3a1,#728d7a 48%,#263b36)}.cover-02:before{inset:15% 24%;border-radius:0 50% 0 50%;transform:rotate(38deg)}
+.cover-03{background:radial-gradient(circle at 65% 35%,#f5d4a5 0 13%,transparent 14%),linear-gradient(135deg,#1a2334,#586e8b 58%,#151a24)}
+.cover-04{background:repeating-linear-gradient(135deg,#c7a3b6 0 7px,#684d6e 7px 14px,#292333 14px 21px)}.cover-04:before{inset:18%;border-radius:0;border:2px solid rgba(255,255,255,.42);transform:rotate(45deg)}
+.cover-05{background:radial-gradient(ellipse at 50% 70%,#f1c1ad 0 12%,transparent 13%),linear-gradient(160deg,#d5a18d,#6f5269 54%,#252336)}
+.cover-06{background:linear-gradient(135deg,#202a36,#4e7880 50%,#c4b6a0)}.cover-06:before{inset:18% 32%;border-radius:45% 45% 12% 12%;background:rgba(9,18,23,.35)}
+.cover-07{background:radial-gradient(circle at 50% 50%,#e5d3ad 0 10%,#bc856e 11% 22%,transparent 23%),linear-gradient(140deg,#3f3d55,#181927)}
+.cover-08{background:linear-gradient(35deg,#c0b6a2,#806d5d 45%,#30343b)}.cover-08:before{inset:12% 15%;border-radius:2px;border:2px solid rgba(255,255,255,.55);transform:rotate(-12deg)}
+.cover-09{background:radial-gradient(circle at 50% 50%,#f2cda1 0 6%,transparent 7%),linear-gradient(135deg,#a75245,#2c2531 58%,#171a25)}
+.cover-10{background:linear-gradient(145deg,#d3d3c8,#78929a 45%,#33424b)}.cover-10:before{inset:14% 25%;border-radius:50% 50% 4px 4px;background:rgba(15,31,35,.32)}
+.cover-11{background:repeating-radial-gradient(circle at 35% 65%,#e4c59c 0 3px,#865d55 4px 8px,#24222b 9px 14px)}
+.cover-12{background:linear-gradient(155deg,#b5b3c8,#625778 42%,#222331)}.cover-12:before{inset:17% 22%;border-radius:50% 50% 0 0;background:rgba(245,224,214,.3)}
+.cover-13{background:radial-gradient(circle at 72% 25%,#d9b1a0 0 12%,transparent 13%),linear-gradient(135deg,#344d4c,#9b9d78 52%,#242f2e)}
+.cover-14{background:linear-gradient(135deg,#e2bb8d,#ad665b 48%,#433747)}.cover-14:before{inset:12%;border:1px solid rgba(255,255,255,.48);border-radius:50% 0 50% 0;transform:rotate(25deg)}
+.cover-15{background:radial-gradient(circle at 50% 50%,#e9d2b3 0 9%,transparent 10%),linear-gradient(145deg,#45516d,#242b3b 55%,#151821)}
+.hub-island{position:absolute;z-index:3;left:50%;bottom:10px;transform:translateX(-50%);width:min(72%,280px);height:38px;display:flex;align-items:center;justify-content:space-evenly;gap:5px;padding:4px 9px;border:1px solid rgba(255,255,255,.16);border-radius:999px;background:rgba(28,29,32,.94);box-shadow:0 7px 22px rgba(0,0,0,.55),inset 0 1px rgba(255,255,255,.07);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px)}
+.hub-island-item{width:30px;height:29px;display:grid;place-items:center;border-radius:50%;color:#aeb0b5;transition:background .25s ease,color .25s ease,transform .25s ease}
+.hub-island-item svg{width:15px;height:15px;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+.hub-island-item.is-selected{background:#3b3d42;color:#fff}
+.hub-island-item:hover{background:#4a4c52;color:#fff;transform:translateY(-2px)}
+@media(max-width:900px){.hub-app-window{width:min(95%,470px)}}
+@media(max-width:650px){
+  .hub-app-window{width:97%;aspect-ratio:1.22;border-radius:10px}
+  .hub-app-titlebar{height:27px;flex-basis:27px;padding-left:8px}
+  .hub-window-controls i{width:30px}
+  .hub-library{padding:10px 9px 45px}
+  .hub-cover-grid{gap:6px}
+  .hub-island{bottom:7px;width:min(78%,250px);height:33px;padding:3px 7px}
+  .hub-island-item{width:26px;height:25px}
+  .hub-island-item svg{width:14px;height:14px}
+}
+
 </style>
 </head>
 <body>
 <div class="scroll-progress" id="scrollProgress"></div>
 <header class="topbar"><div class="topbar-inner">
-  <a class="brand" href="#top" aria-label="Flock3 home"><img src="assets/flock3-logo.png" alt=""><span>Flock3</span></a>
-  <nav class="nav" id="mainNav"><a href="#ecosystem">Ecosystem</a><a href="#device">Device</a><a href="#products">Products</a><a href="#how-it-works">How it works</a><a class="nav-cta" href="#products">Explore Flock3 <span>↗</span></a></nav>
-  <button class="menu-toggle" id="menuToggle" aria-label="Open navigation" aria-expanded="false">☰</button>
+<a aria-label="Flock3 home" class="brand" href="#home"><img alt="" src="assets/flock3-logo.png"/><span>Flock3</span></a>
+<nav class="nav" id="mainNav"><a href="#home">Home</a><a href="#products">Products</a><a href="#faq">FAQ</a></nav>
+<button aria-expanded="false" aria-label="Open navigation" class="menu-toggle" id="menuToggle">☰</button>
 </div></header>
 <main id="top">
-<section class="hero wrap">
-  <div class="hero-copy reveal"><span class="eyebrow">A connected device ecosystem</span><h1>One device.<br><span>More ways</span><br>to create.</h1><p class="hero-lead">Flock3 brings hardware, custom firmware and desktop software together around one capable E-Paper device. A focused ecosystem designed to work as one.</p><div class="actions"><a class="btn" href="#ecosystem">Discover the ecosystem <span>↘</span></a><a class="btn secondary" href="#device">Meet the device</a></div></div>
-  <div class="hero-visual reveal"><div class="device-stage"><img class="device-image" src="assets/device-front.png" alt="LILYGO T5-4.7-S3 Pro E-Paper device, front view"><span class="stage-tag">LILYGO T5-4.7-S3 PRO <b>·</b> ESP32-S3</span></div></div>
-  <div class="hero-scroll"><span class="scroll-mark"></span> SCROLL TO EXPLORE</div>
-</section>
-<div class="marquee" aria-hidden="true"><div class="marquee-track"><span>HARDWARE <i></i> FIRMWARE <i></i> DESKTOP SOFTWARE <i></i> ONE ECOSYSTEM <i></i></span><span>HARDWARE <i></i> FIRMWARE <i></i> DESKTOP SOFTWARE <i></i> ONE ECOSYSTEM <i></i></span></div></div>
-<section class="section foundation" id="ecosystem">
-  <div class="section-head reveal"><div><span class="eyebrow">The Flock3 ecosystem</span><h2>Three parts.<br>One experience.</h2></div><p>Flock3 is not a single app or a standalone firmware. It is a connected system where each part has a clear role — from the device in your hands to the software on your computer.</p></div>
-  <div class="foundation-grid">
-    <article class="feature-panel reveal"><span class="mini-label">01 / HARDWARE</span><div class="feature-symbol">E·P</div><h3>The device</h3><p>A 4.7-inch E-Paper platform built on the LILYGO T5-4.7-S3 Pro. It provides the physical foundation and the display for the Flock3 experience.</p><div class="panel-foot"><span>LILYGO T5-4.7-S3 PRO</span><span>↗</span></div></article>
-    <article class="feature-panel accent reveal"><span class="mini-label">02 + 03 / SOFTWARE</span><div class="feature-symbol">F3</div><h3>Software that<br>works together.</h3><p>Flock3+ runs on the device. Flock3 Hub is its desktop companion for Windows. Together, they connect the device experience with your computer.</p><div class="panel-foot"><span>FLOCK3+ · FLOCK3 HUB</span><span>↗</span></div></article>
+<section class="hero wrap" id="home">
+<div class="hero-copy reveal"><h1>One device.<br/><span>More ways</span><br/>to create.</h1><p class="hero-lead">Flock3 brings hardware, custom firmware and desktop software together around one capable E-Paper device. A focused ecosystem designed to work as one.</p><div class="actions"><a class="btn" href="#products">Explore products <span>↘</span></a><a class="btn secondary" href="#faq">Common questions</a></div></div>
+<div class="hero-visual reveal">
+  <div class="device-stage hero-showcase" id="heroShowcase" aria-label="Flock3 product showcase" aria-roledescription="carousel" tabindex="0">
+    <div class="showcase-slides" id="showcaseSlides">
+      <div class="showcase-slide is-active" data-showcase-slide="0" aria-label="Flock3+ E-Paper device" aria-hidden="false">
+        <div aria-label="Stylized front view of the LILYGO T5-4.7-S3 Pro" class="device-illustration showcase-device">
+          <div class="device-face"><div class="device-screen"></div></div>
+          <span class="device-touch" aria-hidden="true"></span>
+          <span class="device-button side-left upper" aria-hidden="true"></span><span class="device-button side-left lower" aria-hidden="true"></span>
+          <span class="device-button side-right upper" aria-hidden="true"></span><span class="device-button side-right lower" aria-hidden="true"></span>
+        </div>
+      </div>
+      <div class="showcase-slide" data-showcase-slide="1" aria-label="Flock3 Hub for Windows" aria-hidden="true">
+        <div class="hub-app-window" aria-label="Flock3 Hub Windows app preview: black window with a grid of album covers and a bottom control dock">
+          <div class="hub-app-titlebar">
+            <span class="hub-app-title-icon">♪</span><strong>Flock3 Hub</strong>
+            <div class="hub-window-controls" aria-hidden="true"><i class="win-minimize"></i><i class="win-maximize"></i><i class="win-close">×</i></div>
+          </div>
+          <div class="hub-library">
+            <div class="hub-cover-grid" aria-hidden="true">
+              <span class="hub-cover cover-01"></span><span class="hub-cover cover-02"></span><span class="hub-cover cover-03"></span><span class="hub-cover cover-04"></span><span class="hub-cover cover-05"></span>
+              <span class="hub-cover cover-06"></span><span class="hub-cover cover-07"></span><span class="hub-cover cover-08"></span><span class="hub-cover cover-09"></span><span class="hub-cover cover-10"></span>
+              <span class="hub-cover cover-11"></span><span class="hub-cover cover-12"></span><span class="hub-cover cover-13"></span><span class="hub-cover cover-14"></span><span class="hub-cover cover-15"></span>
+            </div>
+            <nav class="hub-island" aria-label="Flock3 Hub controls">
+              <span class="hub-island-item is-selected" title="Music" aria-label="Music"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 18V5l11-2v13M9 9l11-2M5.5 21a3.5 2.5 0 1 0 0-5 3.5 2.5 0 0 0 0 5ZM16.5 18a3.5 2.5 0 1 0 0-5 3.5 2.5 0 0 0 0 5Z"/></svg></span>
+              <span class="hub-island-item" title="Favorites" aria-label="Favorites"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 3 2.7 5.5 6.1.9-4.4 4.3 1 6.1-5.4-2.9-5.4 2.9 1-6.1-4.4-4.3 6.1-.9L12 3Z"/></svg></span>
+              <span class="hub-island-item" title="Search" aria-label="Search"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.8"/><path d="m16 16 5 5"/></svg></span>
+              <span class="hub-island-item" title="Downloads" aria-label="Downloads"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12m-5-5 5 5 5-5M4 19v2h16v-2"/></svg></span>
+              <span class="hub-island-item" title="Settings" aria-label="Settings"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 8.2a3.8 3.8 0 1 0 0 7.6 3.8 3.8 0 0 0 0-7.6Z"/><path d="m19.4 13.5 1.2.9-1.2 2.1-1.5-.5a7.9 7.9 0 0 1-1.5.9l-.2 1.6h-2.4l-.5-1.5a7.7 7.7 0 0 1-1.7 0l-.8 1.3-2.1-1.2.5-1.5a7.9 7.9 0 0 1-.9-1.5l-1.6-.2v-2.4l1.5-.5a7.7 7.7 0 0 1 0-1.7l-1.3-.8 1.2-2.1 1.5.5a7.9 7.9 0 0 1 1.5-.9l.2-1.6h2.4l.5 1.5a7.7 7.7 0 0 1 1.7 0l.8-1.3 2.1 1.2-.5 1.5a7.9 7.9 0 0 1 .9 1.5l1.6.2v2.4l-1.5.5a7.7 7.7 0 0 1 0 1.7Z"/></svg></span>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="showcase-controls" aria-label="Showcase controls">
+      <button class="showcase-arrow" type="button" id="showcasePrev" aria-label="Previous model">‹</button>
+      <div class="showcase-control-center"><span class="showcase-label" id="showcaseLabel">FLOCK3+ · E-PAPER DEVICE</span><div class="showcase-dots"><button type="button" class="showcase-dot is-active" data-showcase-go="0" aria-label="Show Flock3+ device" aria-current="true"></button><button type="button" class="showcase-dot" data-showcase-go="1" aria-label="Show Flock3 Hub for Windows" aria-current="false"></button></div></div>
+      <button class="showcase-arrow" type="button" id="showcaseNext" aria-label="Next model">›</button>
+    </div>
   </div>
+</div>
+<div class="hero-scroll"><span class="scroll-mark"></span> SCROLL TO EXPLORE</div>
 </section>
-<section class="section products" id="device">
-  <div class="section-head reveal"><div><span class="eyebrow">The hardware foundation</span><h2>Meet the device.</h2></div><p>Everything starts with the LILYGO T5-4.7-S3 Pro — a compact E-Paper device powered by the ESP32-S3 platform.</p></div>
-  <div class="product-list">
-    <article class="product-card reveal"><div class="product-info"><span class="product-index">HARDWARE / 01</span><h3>LILYGO<br>T5-4.7-S3 Pro</h3><p>A versatile E-Paper development platform with a large 4.7-inch display and ESP32-S3 at its core. Flock3 builds its device experience on this hardware.</p><div class="product-meta"><span class="tag">4.7″ E-PAPER</span><span class="tag">ESP32-S3</span><span class="tag">WI-FI</span></div><a class="btn secondary" href="#products">Explore the software <span>↓</span></a></div><div class="product-art"><img src="assets/device-front.png" alt="Front of the LILYGO T5-4.7-S3 Pro"></div></article>
-  </div>
-</section>
+
+
 <section class="section products" id="products">
-  <div class="section-head reveal"><div><span class="eyebrow">The software layer</span><h2>Made to work<br>as one.</h2></div><p>Two software components give the hardware its Flock3 identity: one lives on the device, the other brings the experience to your desktop.</p></div>
-  <div class="product-list">
-    <article class="product-card reverse reveal"><div class="product-info"><span class="product-index">FIRMWARE / 02</span><h3>Flock3<span style="color:var(--c5)">+</span></h3><p>The custom firmware for the LILYGO T5-4.7-S3 Pro. It provides the on-device environment and brings the hardware to life.</p><div class="product-meta"><span class="tag">DEVICE FIRMWARE</span><span class="tag">ESP32-S3</span></div><span class="status">BUILT FOR THE DEVICE</span></div><div class="product-art"><img src="assets/device-back.png" alt="Back of the LILYGO T5-4.7-S3 Pro"></div></article>
-    <article class="product-card reveal"><div class="product-info"><span class="product-index">DESKTOP APP / 03</span><h3>Flock3 Hub</h3><p>A Windows desktop companion for the Flock3 ecosystem. It is being developed to make working with your device and its software more convenient.</p><div class="product-meta"><span class="tag">WINDOWS</span><span class="tag">DESKTOP COMPANION</span></div><span class="status">IN DEVELOPMENT</span></div><div class="product-art"><div class="hub-visual" aria-label="Illustrative Flock3 Hub interface preview"><div class="hub-screen"><div class="hub-side"><i></i><i></i><i></i><i></i></div><div class="hub-content"><i></i><i></i><i></i><i></i><i></i></div></div></div></div></article>
-  </div>
+<div class="section-head reveal"><div><h2>Made to work<br/>as one.</h2></div><p>The hardware, device firmware and desktop companion each have a distinct role. Together, they form the Flock3 ecosystem.</p></div>
+<div class="product-list">
+<article class="product-card reveal"><div class="product-info"><h3>Flock3<span style="color:var(--mauve)">+</span></h3><p>The hardware foundation of Flock3: a 4.7-inch E-Paper platform powered by the ESP32-S3. The device provides the display, controls and connectivity for the ecosystem.</p><div class="product-meta"><span class="tag">4.7″ E-PAPER</span><span class="tag">ESP32-S3</span><span class="tag">WI-FI</span></div></div><div class="product-art"><div aria-label="Front view of the LILYGO T5-4.7-S3 Pro" class="device-illustration"><div class="device-face"><div class="device-screen"></div></div><span class="device-touch" aria-hidden="true"></span><span class="device-button side-left upper" aria-hidden="true"></span><span class="device-button side-left lower" aria-hidden="true"></span><span class="device-button side-right upper" aria-hidden="true"></span><span class="device-button side-right lower" aria-hidden="true"></span></div></div></article>
+
+<article class="product-card reveal"><div class="product-info"><h3>Flock3 Hub</h3><p>A Windows desktop music companion with a visual grid of track covers and a compact control dock. Flock3 Hub is currently in development.</p><div class="product-meta"><span class="tag">WINDOWS</span><span class="tag">DESKTOP COMPANION</span></div><span class="status">IN DEVELOPMENT</span></div><div class="product-art"><div class="hub-app-window" aria-label="Flock3 Hub Windows app preview: black window with a grid of album covers and a bottom control dock">
+          <div class="hub-app-titlebar">
+            <span class="hub-app-title-icon">♪</span><strong>Flock3 Hub</strong>
+            <div class="hub-window-controls" aria-hidden="true"><i class="win-minimize"></i><i class="win-maximize"></i><i class="win-close">×</i></div>
+          </div>
+          <div class="hub-library">
+            <div class="hub-cover-grid" aria-hidden="true">
+              <span class="hub-cover cover-01"></span><span class="hub-cover cover-02"></span><span class="hub-cover cover-03"></span><span class="hub-cover cover-04"></span><span class="hub-cover cover-05"></span>
+              <span class="hub-cover cover-06"></span><span class="hub-cover cover-07"></span><span class="hub-cover cover-08"></span><span class="hub-cover cover-09"></span><span class="hub-cover cover-10"></span>
+              <span class="hub-cover cover-11"></span><span class="hub-cover cover-12"></span><span class="hub-cover cover-13"></span><span class="hub-cover cover-14"></span><span class="hub-cover cover-15"></span>
+            </div>
+            <nav class="hub-island" aria-label="Flock3 Hub controls">
+              <span class="hub-island-item is-selected" title="Music" aria-label="Music"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 18V5l11-2v13M9 9l11-2M5.5 21a3.5 2.5 0 1 0 0-5 3.5 2.5 0 0 0 0 5ZM16.5 18a3.5 2.5 0 1 0 0-5 3.5 2.5 0 0 0 0 5Z"/></svg></span>
+              <span class="hub-island-item" title="Favorites" aria-label="Favorites"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 3 2.7 5.5 6.1.9-4.4 4.3 1 6.1-5.4-2.9-5.4 2.9 1-6.1-4.4-4.3 6.1-.9L12 3Z"/></svg></span>
+              <span class="hub-island-item" title="Search" aria-label="Search"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.8"/><path d="m16 16 5 5"/></svg></span>
+              <span class="hub-island-item" title="Downloads" aria-label="Downloads"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12m-5-5 5 5 5-5M4 19v2h16v-2"/></svg></span>
+              <span class="hub-island-item" title="Settings" aria-label="Settings"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 8.2a3.8 3.8 0 1 0 0 7.6 3.8 3.8 0 0 0 0-7.6Z"/><path d="m19.4 13.5 1.2.9-1.2 2.1-1.5-.5a7.9 7.9 0 0 1-1.5.9l-.2 1.6h-2.4l-.5-1.5a7.7 7.7 0 0 1-1.7 0l-.8 1.3-2.1-1.2.5-1.5a7.9 7.9 0 0 1-.9-1.5l-1.6-.2v-2.4l1.5-.5a7.7 7.7 0 0 1 0-1.7l-1.3-.8 1.2-2.1 1.5.5a7.9 7.9 0 0 1 1.5-.9l.2-1.6h2.4l.5 1.5a7.7 7.7 0 0 1 1.7 0l.8-1.3 2.1 1.2-.5 1.5a7.9 7.9 0 0 1 .9 1.5l1.6.2v2.4l-1.5.5a7.7 7.7 0 0 1 0 1.7Z"/></svg></span>
+            </nav>
+          </div>
+        </div></div></article>
+</div>
 </section>
-<section class="section how" id="how-it-works">
-  <div class="section-head reveal"><div><span class="eyebrow">How it fits together</span><h2>From hardware<br>to experience.</h2></div><p>Each component has a distinct job. Together, they form a simple path from the physical device to the software you use.</p></div>
-  <div class="steps"><article class="step reveal"><span class="step-num">01</span><h3>Start with the device</h3><p>The LILYGO board provides the display, controls and ESP32-S3 hardware platform.</p></article><article class="step reveal"><span class="step-num">02</span><h3>Run Flock3+</h3><p>The firmware is the software layer that runs directly on the E-Paper device.</p></article><article class="step reveal"><span class="step-num">03</span><h3>Connect with Hub</h3><p>Flock3 Hub is the desktop companion for Windows, currently in development.</p></article></div>
-</section>
-<section class="section" id="faq"><div class="section-head reveal"><div><span class="eyebrow">Quick answers</span><h2>Good to know.</h2></div><p>A few details to help you understand what Flock3 is — and what is still being built.</p></div><div class="faq reveal">
-  <div class="faq-item"><button class="faq-button" aria-expanded="false"><span>What exactly is Flock3?</span><span>+</span></button><div class="faq-answer"><p>Flock3 is an ecosystem built around the LILYGO T5-4.7-S3 Pro. It consists of the device hardware, Flock3+ firmware and the Flock3 Hub desktop companion.</p></div></div>
-  <div class="faq-item"><button class="faq-button" aria-expanded="false"><span>Is Flock3 Hub available yet?</span><span>+</span></button><div class="faq-answer"><p>Not yet. Flock3 Hub is currently in development. This page does not offer downloads for unfinished software.</p></div></div>
-  <div class="faq-item"><button class="faq-button" aria-expanded="false"><span>Is Flock3+ the same as Flock3 Hub?</span><span>+</span></button><div class="faq-answer"><p>No. Flock3+ is firmware that runs on the device. Flock3 Hub is a separate Windows desktop application designed to accompany the ecosystem.</p></div></div>
+<section class="section" id="faq"><div class="section-head reveal"><div><h2>Good to know.</h2></div><p>A few details to help you understand what Flock3 is — and what is still being built.</p></div><div class="faq reveal">
+<div class="faq-item"><button aria-expanded="false" class="faq-button"><span>What exactly is Flock3?</span><span>+</span></button><div class="faq-answer"><p>Flock3 is an ecosystem built around the LILYGO T5-4.7-S3 Pro. It consists of the device hardware, Flock3+ firmware and the Flock3 Hub desktop companion.</p></div></div>
+<div class="faq-item"><button aria-expanded="false" class="faq-button"><span>Is Flock3 Hub available yet?</span><span>+</span></button><div class="faq-answer"><p>Not yet. Flock3 Hub is currently in development. This page does not offer downloads for unfinished software.</p></div></div>
+<div class="faq-item"><button aria-expanded="false" class="faq-button"><span>Is Flock3+ the same as Flock3 Hub?</span><span>+</span></button><div class="faq-answer"><p>No. Flock3+ is firmware that runs on the device. Flock3 Hub is a separate Windows desktop application designed to accompany the ecosystem.</p></div></div>
 </div></section>
+
 </main>
-<footer class="footer"><div class="footer-inner"><a class="footer-brand" href="#top"><img src="assets/flock3-logo.png" alt=""><span>Flock3</span></a><p>Hardware, firmware and desktop software — connected.</p><div class="footer-links"><a href="#ecosystem">Ecosystem</a><a href="#products">Products</a><a href="#faq">FAQ</a></div></div></footer>
+<footer class="footer reveal"><div class="footer-inner"><a class="footer-brand" href="#home"><img alt="" src="assets/flock3-logo.png"/><span>Flock3</span></a><a class="github-link" href="https://github.com/Shon-Lua/Flock3" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span></a></div></footer>
 <script>
 const menuButton=document.getElementById('menuToggle');
 const nav=document.getElementById('mainNav');
-menuButton.addEventListener('click',()=>{const open=nav.classList.toggle('open');menuButton.setAttribute('aria-expanded',String(open));menuButton.textContent=open?'×':'☰';menuButton.setAttribute('aria-label',open?'Close navigation':'Open navigation');});
-nav.querySelectorAll('a').forEach(link=>link.addEventListener('click',()=>{nav.classList.remove('open');menuButton.setAttribute('aria-expanded','false');menuButton.textContent='☰';}));
-const revealObserver=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('visible');revealObserver.unobserve(entry.target);}}),{threshold:.12});
-document.querySelectorAll('.reveal').forEach(el=>revealObserver.observe(el));
-document.querySelectorAll('.faq-button').forEach(button=>button.addEventListener('click',()=>{const item=button.closest('.faq-item');const open=item.classList.toggle('open');button.setAttribute('aria-expanded',String(open));const answer=item.querySelector('.faq-answer');answer.style.maxHeight=open?answer.scrollHeight+'px':'0';}));
+const navLinks=[...nav.querySelectorAll('a[href^="#"]')];
+const navTargets=navLinks.map(link=>document.querySelector(link.getAttribute('href'))).filter(Boolean);
 const progress=document.getElementById('scrollProgress');
-function updateProgress(){const max=document.documentElement.scrollHeight-innerHeight;progress.style.width=(max>0?scrollY/max*100:0)+'%';}
-addEventListener('scroll',updateProgress,{passive:true});addEventListener('resize',updateProgress);updateProgress();
+
+function closeMenu(){
+  nav.classList.remove('open');
+  menuButton.setAttribute('aria-expanded','false');
+  menuButton.textContent='☰';
+  menuButton.setAttribute('aria-label','Open navigation');
+}
+
+menuButton.addEventListener('click',()=>{
+  const open=nav.classList.toggle('open');
+  menuButton.setAttribute('aria-expanded',String(open));
+  menuButton.textContent=open?'×':'☰';
+  menuButton.setAttribute('aria-label',open?'Close navigation':'Open navigation');
+});
+nav.addEventListener('click',event=>{
+  if(event.target.closest('a')) closeMenu();
+});
+
+const reduceMotion=false;
+const revealItems=document.querySelectorAll('.reveal');
+if('IntersectionObserver' in window){
+  const revealObserver=new IntersectionObserver(entries=>entries.forEach(entry=>{
+    if(entry.isIntersecting){entry.target.classList.add('visible');revealObserver.unobserve(entry.target);}
+  }),{threshold:.08,rootMargin:'0px 0px -7% 0px'});
+  revealItems.forEach(el=>revealObserver.observe(el));
+}else{
+  revealItems.forEach(el=>el.classList.add('visible'));
+}
+
+// Scroll anchors with a controlled easing curve so navigation stays smooth in embedded browsers too.
+let anchorScrollFrame=0;
+function stopAnchorScroll(){
+  if(anchorScrollFrame){cancelAnimationFrame(anchorScrollFrame);anchorScrollFrame=0;}
+}
+function scrollToAnchor(target){
+  if(!target)return;
+  stopAnchorScroll();
+  const headerHeight=document.querySelector('.topbar')?.offsetHeight||0;
+  const start=window.scrollY;
+  const destination=Math.max(0,target.getBoundingClientRect().top+start-headerHeight-12);
+  const distance=destination-start;
+  if(reduceMotion||Math.abs(distance)<2){window.scrollTo(0,destination);return;}
+  const duration=Math.min(1450,Math.max(760,Math.abs(distance)*0.62));
+  const started=performance.now();
+  const easeInOutQuint=t=>t<.5?16*t*t*t*t*t:1-Math.pow(-2*t+2,5)/2;
+  function frame(now){
+    const progress=Math.min(1,(now-started)/duration);
+    const eased=easeInOutQuint(progress);
+    window.scrollTo(0,start+distance*eased);
+    if(progress<1)anchorScrollFrame=requestAnimationFrame(frame);
+    else anchorScrollFrame=0;
+  }
+  anchorScrollFrame=requestAnimationFrame(frame);
+}
+
+document.addEventListener('click',event=>{
+  const origin=event.target instanceof Element?event.target:null;
+  const anchor=origin?.closest('a[href^="#"]');
+  if(!anchor)return;
+  const hash=anchor.getAttribute('href');
+  if(!hash||hash==='#')return;
+  let target;
+  try{target=document.getElementById(decodeURIComponent(hash.slice(1)));}catch{}
+  if(!target)return;
+  event.preventDefault();
+  closeMenu();
+  if(location.hash!==hash)history.pushState(null,'',hash);
+  scrollToAnchor(target);
+});
+
+// Let direct user input interrupt a programmatic scroll immediately.
+['wheel','touchstart','pointerdown'].forEach(type=>addEventListener(type,stopAnchorScroll,{passive:true}));
+addEventListener('keydown',event=>{
+  if(['ArrowDown','ArrowUp','PageDown','PageUp','Home','End',' '].includes(event.key))stopAnchorScroll();
+});
+addEventListener('popstate',()=>{
+  if(!location.hash)return;
+  let target;
+  try{target=document.getElementById(decodeURIComponent(location.hash.slice(1)));}catch{}
+  if(target)scrollToAnchor(target);
+});
+
+document.querySelectorAll('.faq-button').forEach(button=>button.addEventListener('click',()=>{
+  const item=button.closest('.faq-item');
+  const open=item.classList.toggle('open');
+  button.setAttribute('aria-expanded',String(open));
+  const answer=item.querySelector('.faq-answer');
+  answer.style.maxHeight=open?answer.scrollHeight+'px':'0';
+}));
+
+
+// Accessible Home carousel: manual navigation, autoplay, keyboard and touch support.
+const showcase=document.getElementById('heroShowcase');
+if(showcase){
+  const slides=[...showcase.querySelectorAll('[data-showcase-slide]')];
+  const dots=[...showcase.querySelectorAll('[data-showcase-go]')];
+  const label=document.getElementById('showcaseLabel');
+  const labels=['FLOCK3+ · E-PAPER DEVICE','FLOCK3 HUB · WINDOWS APP'];
+  let activeSlide=0;
+  let autoplayTimer=0;
+  let cleanupTimer=0;
+  let touchStartX=0;
+  let touchStartY=0;
+  const motionDuration=980;
+
+  function showSlide(next, direction=1){
+    next=(next+slides.length)%slides.length;
+    if(next===activeSlide)return;
+    const previous=slides[activeSlide];
+    const current=slides[next];
+    previous.classList.remove('is-active','is-leaving','leaves-right');
+    previous.classList.add('is-leaving');
+    if(direction<0)previous.classList.add('leaves-right');
+    current.classList.remove('is-leaving','leaves-right','from-left');
+    if(direction<0)current.classList.add('from-left');
+    current.classList.add('is-active');
+    previous.setAttribute('aria-hidden','true');
+    current.setAttribute('aria-hidden','false');
+    activeSlide=next;
+    dots.forEach((dot,index)=>{
+      const selected=index===activeSlide;
+      dot.classList.toggle('is-active',selected);
+      dot.setAttribute('aria-current',String(selected));
+    });
+    if(label){label.textContent=labels[activeSlide];label.animate([{opacity:.25,transform:'translateY(4px)'},{opacity:1,transform:'translateY(0)'}],{duration:430,easing:'cubic-bezier(.2,.75,.25,1)'});}
+    clearTimeout(cleanupTimer);
+    cleanupTimer=setTimeout(()=>previous.classList.remove('is-leaving','leaves-right'),motionDuration);
+    restartAutoplay();
+  }
+  function restartAutoplay(){
+    clearInterval(autoplayTimer);
+    if(!document.hidden&&!showcase.matches(':hover')&&!showcase.contains(document.activeElement)){
+      autoplayTimer=setInterval(()=>showSlide(activeSlide+1,1),7200);
+    }
+  }
+  document.getElementById('showcasePrev')?.addEventListener('click',()=>showSlide(activeSlide-1,-1));
+  document.getElementById('showcaseNext')?.addEventListener('click',()=>showSlide(activeSlide+1,1));
+  dots.forEach(dot=>dot.addEventListener('click',()=>showSlide(Number(dot.dataset.showcaseGo),Number(dot.dataset.showcaseGo)>activeSlide?1:-1)));
+  showcase.addEventListener('keydown',event=>{
+    if(event.key==='ArrowRight'){event.preventDefault();showSlide(activeSlide+1,1)}
+    if(event.key==='ArrowLeft'){event.preventDefault();showSlide(activeSlide-1,-1)}
+  });
+  const slideSurface=showcase.querySelector('.showcase-slides');
+  slideSurface.addEventListener('pointerdown',event=>{touchStartX=event.clientX;touchStartY=event.clientY;});
+  slideSurface.addEventListener('pointerup',event=>{
+    const dx=event.clientX-touchStartX;
+    const dy=event.clientY-touchStartY;
+    if(Math.abs(dx)>48&&Math.abs(dx)>Math.abs(dy)*1.2)showSlide(activeSlide+(dx<0?1:-1),dx<0?1:-1);
+  });
+  showcase.addEventListener('mouseenter',()=>clearInterval(autoplayTimer));
+  showcase.addEventListener('mouseleave',restartAutoplay);
+  showcase.addEventListener('focusin',()=>clearInterval(autoplayTimer));
+  showcase.addEventListener('focusout',()=>setTimeout(restartAutoplay,50));
+  document.addEventListener('visibilitychange',restartAutoplay);
+  restartAutoplay();
+}
+
+function updateScrollUI(){
+  const max=document.documentElement.scrollHeight-innerHeight;
+  progress.style.width=(max>0?scrollY/max*100:0)+'%';
+  const marker=scrollY+150;
+  let current=navTargets[0]?.id||'home';
+  navTargets.forEach(target=>{
+    if(target.getBoundingClientRect().top+scrollY<=marker) current=target.id;
+  });
+  navLinks.forEach(link=>{
+    if(link.getAttribute('href')==='#'+current) link.setAttribute('aria-current','location');
+    else link.removeAttribute('aria-current');
+  });
+}
+addEventListener('scroll',updateScrollUI,{passive:true});
+addEventListener('resize',updateScrollUI);
+addEventListener('hashchange',updateScrollUI);
+updateScrollUI();
 </script>
 </body>
 </html>
